@@ -4,7 +4,7 @@ import Config from "./config.json" with { type: "json" };
 
 puppeteer.use(StealthPlugin());
 
-const Ext = "C:\\Users\\mroin\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1\\Extensions\\dknlfmjaanfblgfdfebhijalfmhmjjjo\\0.4.12_0";
+const Ext = "./0.4.12_0";
 
 async function sleep(ms) {
             return new Promise(resolve => setTimeout(resolve, ms));
