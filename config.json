@@ -1,0 +1,56 @@
+{
+	"username": "cdouzed",
+	"sites":[
+	{
+		"index": 1,
+		"url": "https://topminecraftservers.org/vote/18687",
+		"voteUrl": "https://topminecraftservers.org/vote/18687",
+		"input": "mc_username",
+		"turnstile": true
+	},
+	{
+		"index": 2,
+		"url": "https://best-minecraft-servers.co/server-jartexnetwork.4402/vote",
+		"voteUrl": "https://best-minecraft-servers.co/",
+		"voteCooldown": 15,
+		"input": "username"
+	},
+	{
+		"index": 3,
+		"url": "https://servers-minecraft.net/server-jartexnetwork.955/vote",
+		"voteUrl": "https://servers-minecraft.net/?voted&name=JartexNetwork&discord=",
+		"voteCooldown": 15,
+		"input": "username",
+		"captcha": true
+	},
+	{
+		"index": 4,
+		"url": "https://minecraft.buzz/vote/24",
+		"voteUrl": "https://minecraft.buzz/",
+		"input": "username",
+		"captcha": true
+	},
+	{
+		"index": 5,
+		"url": "https://minecraftservers.page/servers/jartexnetwork/vote",
+		"voteUrl": "https://minecraftservers.page/servers?vote=1",
+		"voteCooldown": 15,
+		"input": "minecraft_name",
+		"captcha": true
+	},
+	{
+		"index": 6,
+		"url": "https://minecraft-mp.com/server/52462/vote/",
+		"voteUrl": "https://minecraft-mp.com/server/52462/vote/confirm/",
+		"input": "nickname",
+		"turnstile": true,
+		"cloudflare": true,
+		"button": "accept"
+	},
+	{
+		"index": 7,
+		"url": "https://minecraft-server-list.com/server/288369/vote/",
+		"input": "ignn"
+	}
+]
+}
