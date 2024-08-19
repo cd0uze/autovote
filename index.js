@@ -12,7 +12,11 @@ connect({
 
     headless: 'auto',
 
-    args: [],
+    args: [
+        `--disable-extensions-except=${Ext}`, 
+    `--load-extension=${Ext}`,
+    '--enable-automation'
+        ],
 
     customConfig: {},
 
