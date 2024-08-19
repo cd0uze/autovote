@@ -42,7 +42,7 @@ const Browser3 = await connect({
 
 const {browser, page} = Browser3;
 
-await page.goto("")
+await page.goto("https://www.google.com/recaptcha/api2/demo")
 
 
 const browser = await puppeteer.launch({
