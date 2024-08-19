@@ -4,6 +4,7 @@ import Config from "./config.json" with { type: "json" };
 
 puppeteer.use(StealthPlugin());
 
+const Ext = path.join(process.cwd(), 'my-extension');
 const Ext = "./0.4.12_0";
 
 async function sleep(ms) {
