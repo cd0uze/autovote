@@ -18,7 +18,7 @@ const browser = await puppeteer.launch({
   targetFilter: null
 }).catch(err => console.log(err)),
           browser2 = await puppeteer.launch({
-  headless: true,
+  headless: false,
   args: [
     `--disable-extensions-except=${Ext}`, 
     `--load-extension=${Ext}`,
