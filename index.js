@@ -8,9 +8,32 @@ puppeteer.use(StealthPlugin());
 
 const Ext = path.join(process.cwd(), "./0.4.12_0");
 
-async function sleep(ms) {
-            return new Promise(resolve => setTimeout(resolve, ms));
-          };
+connect({
+
+    headless: 'auto',
+
+    args: [],
+
+    customConfig: {},
+
+    skipTarget: [],
+
+    fingerprint: false,
+
+    turnstile: true,
+
+    connectOption: {},
+
+    fpconfig: {},
+
+    // proxy:{
+    //     host:'<proxy-host>',
+    //     port:'<proxy-port>',
+    //     username:'<proxy-username>',
+    //     password:'<proxy-password>'
+    // }
+
+})
 
 const browser = await puppeteer.launch({
   headless: true,
