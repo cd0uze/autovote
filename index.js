@@ -8,10 +8,6 @@ puppeteer.use(StealthPlugin());
 
 const Ext = path.join(process.cwd(), "./0.4.12_0");
 
-const {browser4, page} = Browser3;
-
-await page.goto("https://www.google.com/recaptcha/api2/demo")
-
 
 const browser = await puppeteer.launch({
   headless: true,
