@@ -9,7 +9,7 @@ puppeteer.use(StealthPlugin());
 const Ext = path.join(process.cwd(), "./0.4.12_0");
 
 async function sleep(ms){
-    new Promiser(resolve => await setTimeout(resolve, ms))
+    new Promise(resolve => await setTimeout(resolve, ms))
 }
 
 const browser = await puppeteer.launch({
