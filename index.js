@@ -40,7 +40,7 @@ const Browser3 = await connect({
 })
 
 
-const {browser, page} = Browser3;
+const {browser3, page} = Browser3;
 
 await page.goto("https://www.google.com/recaptcha/api2/demo")
 
