@@ -8,38 +8,6 @@ puppeteer.use(StealthPlugin());
 
 const Ext = path.join(process.cwd(), "./0.4.12_0");
 
-const Browser3 = await connect({
-
-    headless: 'auto',
-
-    args: [
-        `--disable-extensions-except=${Ext}`, 
-    `--load-extension=${Ext}`,
-    '--enable-automation'
-        ],
-
-    customConfig: {},
-
-    skipTarget: [],
-
-    fingerprint: false,
-
-    turnstile: true,
-
-    connectOption: {},
-
-    fpconfig: {},
-
-    // proxy:{
-    //     host:'<proxy-host>',
-    //     port:'<proxy-port>',
-    //     username:'<proxy-username>',
-    //     password:'<proxy-password>'
-    // }
-
-})
-
-
 const {browser4, page} = Browser3;
 
 await page.goto("https://www.google.com/recaptcha/api2/demo")
