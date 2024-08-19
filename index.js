@@ -42,7 +42,7 @@ const Browser3 = await connect({
 
 const {browser, page} = Browser3;
 
-await page.goto("c")
+await page.goto("")
 
 
 const browser = await puppeteer.launch({
