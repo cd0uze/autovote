@@ -8,7 +8,7 @@ puppeteer.use(StealthPlugin());
 
 const Ext = path.join(process.cwd(), "./0.4.12_0");
 
-connect({
+const Browser3 = await connect({
 
     headless: 'auto',
 
