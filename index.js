@@ -13,7 +13,7 @@ async function sleep(ms){
 };
 
 const browser = await puppeteer.launch({
-  headless: false,
+  headless: true,
   args: [
     `--disable-extensions-except=${Ext}`, 
     `--load-extension=${Ext}`,
