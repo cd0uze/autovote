@@ -106,8 +106,6 @@ if(Config.sites[i].cloudflare){
 
         console.log("Website " + Config.sites[i].index + " | Waiting for vote...")
 
-        if(Config.sites[i].voteCooldown) await sleep((Config.sites[i].voteCooldown+5)*1000)
-
                 if(Config.sites[i].index == 4) {
                 await page.waitForNavigation();
 
