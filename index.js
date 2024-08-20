@@ -122,7 +122,8 @@ if(Config.sites[i].cloudflare){
                 await page.waitForSelector("div[class='modal-body text-center']", {timeout: 0});
 
                 const Result = await page.evaluate(() => document.getElementsByClassName("modal-body text-center")[0]?.textContent);
-                console.log(Result)
+                console.log(Result);
+                
                 if(Result.includes("Thank you for voting!")) {
                     console.log("Website " + Config.sites[i].index + " | Vote added !");
                 } else {
