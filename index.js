@@ -119,12 +119,11 @@ if(Config.sites[i].cloudflare){
 
                 if(Config.sites[i].index == 4) {
                 await page.waitForNavigation();
-                await page.waitForSelector("div.modal-body.text-center", {timeout: 0});
+                await page.waitForSelector('div[class="modal-body text-center"]', {timeout: 0});
 
                 const Result = await page.evaluate(() => document.getElementsByClassName("modal-body text-center")[0]?.textContent);
-                console.log(Result)
 
-                if(Result && Result.contains("Thank you for voting!")) {
+                if(Result.contains("Thank you for voting!")) {
                     console.log("Website " + Config.sites[i].index + " | Vote added !");
                 } else {
                     console.log("Website " + Config.sites[i].index + " | Unknown error !");
