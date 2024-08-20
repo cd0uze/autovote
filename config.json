@@ -21,6 +21,7 @@
 		"index": 3,
 		"url": "https://servers-minecraft.net/server-jartexnetwork.955/vote",
 		"voteUrl": "https://servers-minecraft.net/?voted&name=JartexNetwork&discord=",
+		"voteConfirm": true,
 		"voteCooldown": 15,
 		"input": "username",
 		"captcha": true
