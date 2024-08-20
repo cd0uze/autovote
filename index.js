@@ -136,7 +136,6 @@ if(Config.sites[i].cloudflare){
             }
 
             if(Config.sites[i].voteConfirm){
-                new Promise(async resolve => {
                 await page.waitForNavigation({timeout: 0});
 
                 const Url = await page.url();
