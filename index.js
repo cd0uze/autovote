@@ -1,7 +1,6 @@
 import puppeteer from 'puppeteer-extra';
 import StealthPlugin from 'puppeteer-extra-plugin-stealth';
 import path from 'path';
-import { connect } from 'puppeteer-real-browser';
 import Config from "./config.json" with { type: "json" };
 
 puppeteer.use(StealthPlugin());
