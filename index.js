@@ -140,9 +140,7 @@ if(Config.sites[i].cloudflare){
                 }
 
             if(Config.sites[i].voteConfirm){
-                if(Config.sites[i].voteCooldown)
-                    await sleep((Config.sites[i].voteCooldown+5)*1000);
-                }
+                if(Config.sites[i].voteCooldown) await sleep((Config.sites[i].voteCooldown+5)*1000);
 
                 if(Config.sites[i].index !== 2)                
 
