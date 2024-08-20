@@ -47,7 +47,9 @@ if(i == 0 || i == 5){
 
 console.log("Website " + Config.sites[i].index + " | Website opened !");
 
-await page.waitForSelector(`input[name=${Config.sites[i].input}]`, {timeout: 0});
+await page.waitForSelector(`input[name=${Config.sites[i].input}]`, {timeout: 0}).catch(err => {
+    
+})
 await page.evaluate((e) => e.scrollIntoView(), (await page.$(`input[name=${Config.sites[i].input}`)));
 
 if(Config.sites[i].button){
