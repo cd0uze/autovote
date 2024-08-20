@@ -18,7 +18,8 @@ const response = await connect({
     turnstile: true,
 });
 
-const browser2 = await puppeteer.launch({
+const {browser} = response,
+browser2 = await puppeteer.launch({
   headless: false,
   args: [
     `--disable-extensions-except=${Ext}`, 
@@ -26,8 +27,7 @@ const browser2 = await puppeteer.launch({
     '--enable-automation'
   ],
   targetFilter: null
-}).catch(err => console.log(err)),
-{browser} = response;
+}).catch(err => console.log(err));
 
 const page2 = await browser.newPage();
 page2.goto("google.com")
