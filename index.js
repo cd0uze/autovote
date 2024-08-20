@@ -16,7 +16,7 @@ const response = await connect({
     headless: "auto",
     fingerprint: false,
     turnstile: true,
-})
+});
 
 const browser = await puppeteer.launch({
   headless: false,
