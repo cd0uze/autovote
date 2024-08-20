@@ -140,6 +140,7 @@ if(Config.sites[i].cloudflare){
                 }
             }
 
+            console.log(Config.sites[i].voteConfirm)
             if(Config.sites[i].voteConfirm){
                 await page.waitForNavigation({timeout: 0});
 
