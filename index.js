@@ -140,11 +140,12 @@ if(Config.sites[i].cloudflare){
                 }
 
             if(Config.sites[i].voteConfirm){
+                await page.waitForNavigation({timeout: 0});
+                
                 if(Config.sites[i].voteCooldown) {
                     sleep(10000);
                 }
                 
-                await page.waitForNavigation({timeout: 0});
 
                 const Url = await page.url();
                 console.log("Website " + Config.sites[i].index + " | " + Url)
