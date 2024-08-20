@@ -151,7 +151,6 @@ if(Config.sites[i].cloudflare){
                 }
             }
         }
-        return Voted || Unvoted ? true : false;
     };
 await check();
 }, 5000);
