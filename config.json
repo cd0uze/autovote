@@ -46,6 +46,7 @@
 		"index": 6,
 		"url": "https://minecraft-mp.com/server/52462/vote/",
 		"voteUrl": "https://minecraft-mp.com/server/52462/vote/confirm/",
+		"voteConfirm": true,
 		"input": "nickname",
 		"turnstile": true,
 		"cloudflare": true,
