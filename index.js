@@ -18,7 +18,7 @@ const response = await connect({
     turnstile: true,
 });
 
-const { page, browser, setTarget } = await response,
+const { pageReal, browser, setTarget } = await response,
 browser2 = await puppeteer.launch({
   headless: false,
   args: [
