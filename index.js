@@ -141,9 +141,9 @@ if(Config.sites[i].cloudflare){
 
             if(Config.sites[i].voteConfirm){
                 await page.waitForNavigation({timeout: 0});
-                
+
                 if(Config.sites[i].voteCooldown) {
-                    sleep(10000);
+                    await sleep(10000);
                 }
                 
 
