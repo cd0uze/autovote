@@ -147,7 +147,7 @@ if(Config.sites[i].cloudflare){
 
                 if(Url === Config.sites[i].voteUrl) {
                     console.log("Website " + Config.sites[i].index + " | Vote added !");
-                    V
+                    Voted
                 } else {
                     console.log("Website " + Config.sites[i].index + " | Unknown error !");
                 }
