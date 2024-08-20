@@ -144,7 +144,7 @@ if(Config.sites[i].cloudflare){
                 await page.waitForNavigation({timeout: 0});
 
                 const Url = await page.url();
-                co
+                console.log'
 
                 if(Url === Config.sites[i].voteUrl) {
                     console.log("Website " + Config.sites[i].index + " | Vote added !");
