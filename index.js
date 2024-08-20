@@ -14,10 +14,6 @@ async function sleep(ms){
 
 connect({
     headless: 'auto',
-    args: [],
-    customConfig: {},
-
-    skipTarget: [],
 
     fingerprint: false,
 
