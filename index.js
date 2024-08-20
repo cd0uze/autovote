@@ -167,6 +167,7 @@ if(Config.sites[i].cloudflare){
     };
 await check();
 }, 5000);
+await page.close();
 });
 }).catch(err => console.log("Website " + Config.sites[i].index + " | " + err.message));
 };
