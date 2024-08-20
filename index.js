@@ -13,7 +13,7 @@ async function sleep(ms){
 };
 
 connect({
-    headless: ',
+    headless: "auto",
     fingerprint: false,
     turnstile: true,
 })
