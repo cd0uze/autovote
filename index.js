@@ -148,7 +148,6 @@ if(Config.sites[i].cloudflare){
                     console.log("Website " + Config.sites[i].index + " | Unknown error !");
                     resolve();
                 }
-            });
             }
         }
     };
