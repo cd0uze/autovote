@@ -18,7 +18,7 @@ const response = await connect({
     turnstile: true,
 });
 
-const browser = await puppeteer.launch({
+const browser2 = await puppeteer.launch({
   headless: false,
   args: [
     `--disable-extensions-except=${Ext}`, 
