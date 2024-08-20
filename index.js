@@ -147,6 +147,10 @@ if(Config.sites[i].cloudflare){
                 const Url = await page.url();
                 console.log("Website " + Config.sites[i].index + " | " + Url)
 
+                if(Config.sites[i].index == 1 && !Url.includes("vote")) {
+
+                }
+
                 if(Url === Config.sites[i].voteUrl) {
                     console.log("Website " + Config.sites[i].index + " | Vote added !");
                     resolve()
