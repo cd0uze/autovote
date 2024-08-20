@@ -34,7 +34,7 @@ const browser = await puppeteer.launch({
 async function autovote(i) {
     let Voted = false,
     Unvoted = false;
-    
+
     await (Config.sites[i].turnstile ? browser2 : browser).newPage().then(async page => {
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36');
 
@@ -116,6 +116,7 @@ if(Config.sites[i].cloudflare){
             
             if(Result === "Thanks, Vote Registered") {
                 console.log("Website " + Config.sites[i].index + " | Vote added !");
+                Voted = true;
             } else if(Result === "We cannot verify your vote due to a low browser score. Try another browser or try login to Google to raise your score." || Result === "The verification expired due to timeout.Simply click the Vote button again and it should work."){
                     console.log("Website " + Config.sites[i].index + " | Error occured.Voting again...");
                     await check()
