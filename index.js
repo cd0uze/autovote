@@ -53,7 +53,7 @@ console.log("Website " + Config.sites[i].index + " | Website opened !");
 await page.waitForSelector(`input[name=${Config.sites[i].input}]`, {timeout: 0}).catch(async err => {
 console.log("Website " + Config.sites[i].index + " | " + err.message);
 
-page.close();
+await page.close();
 Unvoted = true;
 });
 
