@@ -135,7 +135,7 @@ if(Config.sites[i].cloudflare){
                 }
             }
 
-            if(Config.sites[i].index !== 7 || Config.sites[i].index !== 4){
+            if(Config.sites[i].voteConfirm){
                 new Promise(async resolve => {
                 await page.waitForNavigation({timeout: 0});
 
