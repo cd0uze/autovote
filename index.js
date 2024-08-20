@@ -166,4 +166,3 @@ for (const i in Config.sites) {
 };
 
 
-autovote(2);
