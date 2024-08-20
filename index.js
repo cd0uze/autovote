@@ -48,7 +48,7 @@ if(i == 0 || i == 5){
 console.log("Website " + Config.sites[i].index + " | Website opened !");
 
 await page.waitForSelector(`input[name=${Config.sites[i].input}]`, {timeout: 0}).catch(err => {
-
+console.log("Website " + Config.sites[i].index + " | " + err.message));
 })
 await page.evaluate((e) => e.scrollIntoView(), (await page.$(`input[name=${Config.sites[i].input}`)));
 
@@ -76,7 +76,7 @@ if(Config.sites[i].cloudflare){
 }
     if(Config.sites[i].captcha){
         console.log("Website " + Config.sites[i].index + " | Solving Captcha...");
-        
+
         const Interval2 = setInterval(async function(){
         const Frame = await page.frames().find(f => f.name().startsWith("a-"));
 
