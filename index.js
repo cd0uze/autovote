@@ -32,7 +32,7 @@ const browser = await puppeteer.launch({
 }).catch(err => console.log(err));
 
           let Voted = true,
-          Unvoted = false,
+          Unvoted = true,
 
 async function autovote(i) {
     Voted = Config.sites[i].index == 1 ? true : false;
