@@ -29,7 +29,7 @@ browser2 = await puppeteer.launch({
   targetFilter: null
 }).catch(err => console.log(err));
 
-setTarget({status: false });
+setTarget({status: false});
 
 await (await browser.newPage()).goto("https://google.com")
 async function autovote(i) {
