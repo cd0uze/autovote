@@ -5,6 +5,7 @@
 		"index": 1,
 		"url": "https://topminecraftservers.org/vote/18687",
 		"voteUrl": "https://topminecraftservers.org/vote/18687",
+		"voteConfirm": true,
 		"input": "mc_username",
 		"turnstile": true
 	},
@@ -12,6 +13,7 @@
 		"index": 2,
 		"url": "https://best-minecraft-servers.co/server-jartexnetwork.4402/vote",
 		"voteUrl": "https://best-minecraft-servers.co/",
+		"voteConfirm": true,
 		"voteCooldown": 15,
 		"input": "username"
 	},
