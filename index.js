@@ -123,7 +123,7 @@ if(Config.sites[i].cloudflare){
 
                 const Result = await page.evaluate(() => document.getElementsByClassName("modal-body text-center")[0]?.textContent);
 
-                if(Result.contains("Thank you for voting!")) {
+                if(Result.includes("Thank you for voting!")) {
                     console.log("Website " + Config.sites[i].index + " | Vote added !");
                 } else {
                     console.log("Website " + Config.sites[i].index + " | Unknown error !");
