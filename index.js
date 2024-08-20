@@ -108,7 +108,23 @@ if(Config.sites[i].cloudflare){
 
         if(Config.sites[i].voteCooldown) await sleep((Config.sites[i].voteCooldown+5)*1000)
 
-        if(Config.sites[i].index == 7) {
+                if(Config.sites[i].index == 4) {
+                await page.waitForNavigation();
+
+                await page.waitForSelector("div[class='modal-body text-center']", {timeout: 0});
+
+                const Result = await page.evaluate(() => document.getElementsByClassName("modal-body text-center")[0]?.textContent);
+
+                if(Result.includes("Thank you for voting!")) {
+                    console.log("Website " + Config.sites[i].index + " | Vote added !");
+                    resolve()
+                } else {
+                    console.log("Website " + Config.sites[i].index + " | Unknown error !");
+                    resolve()
+                }
+            }
+
+            if(Config.sites[i].index == 7) {
             await page.waitForFunction('document.getElementById("voteerror").textContent !== "Please Wait...."', {timeout: 0});
 
             const Result = await page.evaluate(() => document.getElementById("voteerror")?.textContent);
@@ -124,22 +140,6 @@ if(Config.sites[i].cloudflare){
                         resolve()
                     }
                 }
-
-                if(Config.sites[i].index == 4) {
-                await page.waitForNavigation();
-                
-                await page.waitForSelector("div[class='modal-body text-center']", {timeout: 0});
-
-                const Result = await page.evaluate(() => document.getElementsByClassName("modal-body text-center")[0]?.textContent);
-
-                if(Result.includes("Thank you for voting!")) {
-                    console.log("Website " + Config.sites[i].index + " | Vote added !");
-                    resolve()
-                } else {
-                    console.log("Website " + Config.sites[i].index + " | Unknown error !");
-                    resolve()
-                }
-            }
 
             console.log(Config.sites[i].voteConfirm)
             if(Config.sites[i].voteConfirm){
