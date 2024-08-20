@@ -49,6 +49,9 @@ console.log("Website " + Config.sites[i].index + " | Website opened !");
 
 await page.waitForSelector(`input[name=${Config.sites[i].input}]`, {timeout: 0}).catch(err => {
 console.log("Website " + Config.sites[i].index + " | " + err.message);
+
+await page.close();
+Unvoted = true;
 })
 await page.evaluate((e) => e.scrollIntoView(), (await page.$(`input[name=${Config.sites[i].input}`)));
 
