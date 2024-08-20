@@ -21,15 +21,6 @@ const browser = await puppeteer.launch({
   ],
   targetFilter: null
 }).catch(err => console.log(err)),
-          browser2 = await puppeteer.launch({
-  headless: false,
-  args: [
-    `--disable-extensions-except=${Ext}`, 
-    `--load-extension=${Ext}`,
-    '--enable-automation'
-  ],
-  targetFilter: (target) => target.type() !== 'other' || !!target.url()
-}).catch(err => console.log(err));
 
 async function autovote(i) {
     await (Config.sites[i].turnstile ? browser2 : browser).newPage().then(async page => {
