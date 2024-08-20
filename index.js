@@ -12,7 +12,7 @@ async function sleep(ms){
     return new Promise(resolve => setTimeout(resolve, ms));
 };
 
-connect({
+const connect({
     headless: "auto",
     fingerprint: false,
     turnstile: true,
