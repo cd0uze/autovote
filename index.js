@@ -160,8 +160,9 @@ check();
 };
 
 for (const i in Config.sites) {
+    if()
     await autovote(i)
 };
-*/
+
 
 autovote(2);
