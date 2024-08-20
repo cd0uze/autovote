@@ -14,7 +14,6 @@ async function sleep(ms){
 
 connect({
     headless: 'auto',
-
     fingerprint: false,
     turnstile: true,
 })
