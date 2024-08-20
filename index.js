@@ -95,6 +95,7 @@ if(Config.sites[i].cloudflare){
     await page.focus(`input[name=${Config.sites[i].input}]`);
     await page.keyboard.type(Config.username);
 
+    new Promise(async resolve => {
     const Interval3 = setInterval(async function() {
     async function check(){
     if(Checked) {
@@ -153,6 +154,7 @@ if(Config.sites[i].cloudflare){
     };
 check();
 }, 5000);
+});
 }).catch(err => console.log("Website " + Config.sites[i].index + " | " + err.message));
 };
 
