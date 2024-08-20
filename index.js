@@ -122,7 +122,6 @@ if(Config.sites[i].cloudflare){
                     await check()
                     } else {
                         console.log("Website " + Config.sites[i].index + " | Unknown error !");
-                        Unvoted = false;
                     }
                 }
 
@@ -134,10 +133,8 @@ if(Config.sites[i].cloudflare){
 
                 if(Result.includes("Thank you for voting!")) {
                     console.log("Website " + Config.sites[i].index + " | Vote added !");
-                    Voted = true;
                 } else {
                     console.log("Website " + Config.sites[i].index + " | Unknown error !");
-                    Unvoted = false;
                 }
             }
 
@@ -149,10 +146,8 @@ if(Config.sites[i].cloudflare){
 
                 if(Url === Config.sites[i].voteUrl) {
                     console.log("Website " + Config.sites[i].index + " | Vote added !");
-                    Voted = true;
                 } else {
                     console.log("Website " + Config.sites[i].index + " | Unknown error !");
-                    Unvoted = false;
                 }
             }
         }
