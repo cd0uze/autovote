@@ -21,7 +21,7 @@ const browser = await puppeteer.launch({
   ],
   targetFilter: null
 }).catch(err => console.log(err)),
-browser2 = response;
+{browser2 = response;
 
 async function autovote(i) {
     await (Config.sites[i].turnstile ? browser2 : browser).newPage().then(async page => {
