@@ -136,7 +136,7 @@ if(Config.sites[i].cloudflare){
             }
 
             if(Config.sites[i].index !== 7 || Config.sites[i].index !== 4){
-                new Promise(resolve => {
+                new Promise(async resolve => {
                 await page.waitForNavigation({timeout: 0});
 
                 const Url = await page.url();
