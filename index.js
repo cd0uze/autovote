@@ -13,7 +13,6 @@ async function sleep(ms){
 };
 
 connect({
-
     headless: 'auto',
     args: [],
     customConfig: {},
