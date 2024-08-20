@@ -153,4 +153,4 @@ check();
 };
 */
 
-//autovote(3);
+autovote(3);
