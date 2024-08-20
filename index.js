@@ -32,6 +32,8 @@ const browser = await puppeteer.launch({
 }).catch(err => console.log(err));
 
 async function autovote(i){
+    let Voted = false,
+    Unvoted = true;
     await (Config.sites[i].turnstile ? browser2 : browser).newPage().then(async page => {
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36');
 
