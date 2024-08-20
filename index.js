@@ -16,20 +16,7 @@ connect({
     headless: 'auto',
 
     fingerprint: false,
-
     turnstile: true,
-
-    connectOption: {},
-
-    fpconfig: {},
-
-    // proxy:{
-    //     host:'<proxy-host>',
-    //     port:'<proxy-port>',
-    //     username:'<proxy-username>',
-    //     password:'<proxy-password>'
-    // }
-
 })
 
 const browser = await puppeteer.launch({
