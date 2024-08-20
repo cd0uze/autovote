@@ -55,7 +55,8 @@ console.log("Website " + Config.sites[i].index + " | " + err.message);
 
 await page.close();
 Unvoted = true;
-})
+});
+
 await page.evaluate((e) => e.scrollIntoView(), (await page.$(`input[name=${Config.sites[i].input}`)));
 
 if(Config.sites[i].button){
