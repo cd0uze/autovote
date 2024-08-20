@@ -136,6 +136,7 @@ if(Config.sites[i].cloudflare){
             }
 
             if(Config.sites[i].index !== 7 || Config.sites[i].index !== 4){
+                new Promise(resolve => {
                 await page.waitForNavigation({timeout: 0});
 
                 const Url = await page.url();
@@ -148,6 +149,7 @@ if(Config.sites[i].cloudflare){
                     console.log("Website " + Config.sites[i].index + " | Unknown error !");
                     Unvoted = true;
                 }
+            });
             }
         }
     };
