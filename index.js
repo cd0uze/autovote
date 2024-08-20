@@ -160,7 +160,7 @@ check();
 };
 
 for (const i in Config.sites) {
-    if(Voted )
+    if(Voted || Unvoted)
     await autovote(i)
 };
 
