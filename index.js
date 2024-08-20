@@ -141,7 +141,7 @@ if(Config.sites[i].cloudflare){
 
             if(Config.sites[i].voteConfirm){
                 if(Config.sites[i].voteCooldown) {
-                    await sleep(20000);
+                    await sleep((Config.sites[i].voteCooldown+5)*1000);
                 }               
 
                 const Url = await page.url();
