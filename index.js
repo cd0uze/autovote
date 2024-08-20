@@ -31,6 +31,9 @@ const browser = await puppeteer.launch({
   targetFilter: (target) => target.type() !== 'other' || !!target.url()
 }).catch(err => console.log(err));
 
+          let Voted,
+          Unvoted;
+
 async function autovote(i) {
     let Voted = Config.sites[i].index == 1 ? true : false,
     Unvoted = Config.sites[i].index == 1 ? true : false;
