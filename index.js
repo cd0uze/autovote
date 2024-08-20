@@ -162,7 +162,7 @@ check();
 for (const i in Config.sites) {
     if(Voted || Unvoted) {
     await autovote(i)
-    
+}
 };
 
 
