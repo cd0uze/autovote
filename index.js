@@ -144,8 +144,7 @@ if(Config.sites[i].cloudflare){
 
                 if(Config.sites[i].voteCooldown) {
                     await sleep(20000);
-                }
-                
+                }               
 
                 const Url = await page.url();
                 console.log("Website " + Config.sites[i].index + " | " + Url)
