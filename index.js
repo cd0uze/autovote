@@ -150,7 +150,7 @@ if(Config.sites[i].cloudflare){
                 if(Config.sites[i].index == 1 && !Url.includes("vote")) {
                     console.log("Website " + Config.sites[i].index + " | Vote added !");
                     resolve()
-                } else if()
+                } else if(Config.sites[i].index == 1 && Url.includes("vote")) 
 
                 if(Url === Config.sites[i].voteUrl) {
                     console.log("Website " + Config.sites[i].index + " | Vote added !");
