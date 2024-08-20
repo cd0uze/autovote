@@ -35,7 +35,7 @@ const browser = await puppeteer.launch({
           Unvoted;
 
 async function autovote(i) {
-    let Voted = Config.sites[i].index == 1 ? true : false,
+    Voted = Config.sites[i].index == 1 ? true : false,
     Unvoted = Config.sites[i].index == 1 ? true : false;
 
     await (Config.sites[i].turnstile ? browser2 : browser).newPage().then(async page => {
