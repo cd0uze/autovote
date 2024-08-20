@@ -110,6 +110,8 @@ if(Config.sites[i].cloudflare){
 
             if(Config.sites[i].index == 2) {
                 await page.waitForNavigation();
+
+                const Url = await page.url();
             }
 
                 if(Config.sites[i].index == 4) {
