@@ -94,8 +94,6 @@ if(Config.sites[i].cloudflare){
 
     await page.focus(`input[name=${Config.sites[i].input}]`);
     await page.keyboard.type(Config.username);
-
-    new Promise(async resolve => {
     const Interval3 = setInterval(async function() {
     async function check(){
     if(Checked) {
@@ -115,13 +113,11 @@ if(Config.sites[i].cloudflare){
             
             if(Result === "Thanks, Vote Registered") {
                 console.log("Website " + Config.sites[i].index + " | Vote added !");
-                resolve()
             } else if(Result === "We cannot verify your vote due to a low browser score. Try another browser or try login to Google to raise your score." || Result === "The verification expired due to timeout.Simply click the Vote button again and it should work."){
                     console.log("Website " + Config.sites[i].index + " | Error occured.Voting again...");
                     check()
                     } else {
                         console.log("Website " + Config.sites[i].index + " | Unknown error !");
-                        resolve();
                     }
                 }
 
@@ -133,10 +129,8 @@ if(Config.sites[i].cloudflare){
 
                 if(Result.includes("Thank you for voting!")) {
                     console.log("Website " + Config.sites[i].index + " | Vote added !");
-                    resolve()
                 } else {
                     console.log("Website " + Config.sites[i].index + " | Unknown error !");
-                    resolve()
                 }
             }
 
@@ -158,7 +152,6 @@ if(Config.sites[i].cloudflare){
     };
 check();
 }, 5000);
-});
 }).catch(err => console.log("Website " + Config.sites[i].index + " | " + err.message));
 };
 
