@@ -3,8 +3,6 @@ if (process.platform !== "win32") {
     const app = express()
     const port = 3000
     
-    // http://localhost:3000/screenshot1.png
-    
     app.use(express.static("screenshots"));
     
     app.get('/', (req, res) => {
