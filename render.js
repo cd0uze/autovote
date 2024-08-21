@@ -1,4 +1,4 @@
-
+if (process.platform !== "win32") {
     import express from "express";
 
     const app = express();
@@ -6,7 +6,7 @@
     
     
     app.get('/', (req, res) => {
-      res.send("Testing...")
+      res.send('sltcv')
     })
     
     app.listen(port, () => {
@@ -18,3 +18,4 @@
     }
     
     setInterval(get, 300000);
+}
