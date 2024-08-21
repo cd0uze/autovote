@@ -14,7 +14,7 @@ if (process.platform !== "win32") {
     })
     
     function get() {
-      https.get("https://sltcv.onrender.com");
+      https.get("https://autovote.onrender.com");
     }
     
     setInterval(get, 300000);
