@@ -109,7 +109,6 @@ if(Config.sites[i].cloudflare){
         if(Config.sites[i].index !== 2) await page.waitForNavigation({timeout: 0});
 
                 if(Config.sites[i].index == 4) {
-                await page.waitForNavigation();
 
                 await page.waitForSelector("div[class='modal-body text-center']", {timeout: 0});
 
