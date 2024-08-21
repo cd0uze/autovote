@@ -1,4 +1,4 @@
-if (process.platform !== "win32") {
+if (process.platform !== 'win32') {
     import express from "express";
 
     const app = express();
