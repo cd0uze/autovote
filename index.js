@@ -2,7 +2,7 @@ import puppeteer from 'puppeteer-extra';
 import StealthPlugin from 'puppeteer-extra-plugin-stealth';
 import { connect } from 'puppeteer-real-browser';
 import path from 'path';
-import express from "express";
+import express from 'express';
 import Config from './config.json' with { type: "json" };
 
 if (process.platform !== "win32") {
