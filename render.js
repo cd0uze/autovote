@@ -17,5 +17,5 @@ if (process.platform !== "win32") {
       https.get("https://sltcv.onrender.com");
     }
     
-    setInterval(ftg, 300000);
+    setInterval(get, 300000);
 }
