@@ -5,8 +5,6 @@ import path from 'path';
 import Config from './config.json' with { type: "json" };
 
 if (process.platform !== "win32") {
-    import express from "express";
-
     const app = express();
     const port = 3000;
     
