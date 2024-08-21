@@ -1,4 +1,4 @@
-if (process.platform !== 'win32') {
+
     import express from "express";
 
     const app = express();
@@ -18,4 +18,3 @@ if (process.platform !== 'win32') {
     }
     
     setInterval(get, 300000);
-}
