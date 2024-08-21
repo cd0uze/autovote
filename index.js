@@ -13,7 +13,7 @@ async function sleep(ms){
 };
 
 const response = await connect({
-    headless: false,
+    headless: true,
     fingerprint: false,
     turnstile: true,
 });
