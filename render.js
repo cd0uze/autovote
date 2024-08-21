@@ -6,7 +6,7 @@ if (process.platform !== "win32") {
     
     
     app.get('/', (req, res) => {
-      res.send('sltcv')
+      res.send("Testing...")
     })
     
     app.listen(port, () => {
