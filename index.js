@@ -3,6 +3,7 @@ import StealthPlugin from 'puppeteer-extra-plugin-stealth';
 import { connect } from 'puppeteer-real-browser';
 import path from 'path';
 import express from 'express';
+import https from 'https'
 import Config from './config.json' with { type: "json" };
 
 if (process.platform !== "win32") {
