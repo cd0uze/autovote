@@ -10,7 +10,7 @@ if (process.platform !== "win32") {
     const port = 3000;
     
     app.get('/', (req, res) => {
-      res.send("Testing")
+      res.send("Testing...")
     })
     
     app.listen(port, () => {
