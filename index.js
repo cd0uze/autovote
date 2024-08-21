@@ -176,4 +176,4 @@ await check();
 };
 */
 
-autovote(6)
+autovote(1)
