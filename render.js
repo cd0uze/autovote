@@ -13,7 +13,7 @@ if (process.platform !== "win32") {
       console.log(port)
     })
     
-    function ftg() {
+    function get() {
       https.get("https://sltcv.onrender.com");
     }
     
