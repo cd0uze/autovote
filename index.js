@@ -133,6 +133,8 @@ if(Config.sites[i].cloudflare){
             await page.waitForSelector("button[class='btn btn-primary btn-lg btn-block']", {timeout: 0});
 
             const Result = await page.evaluate(() => document.getElementsByClassName("btn btn-primary btn-lg btn-block")[0].textContent);
+
+            
         }
                 if(Config.sites[i].index == 4) {
                 await page.waitForSelector("div[class='modal-body text-center']", {timeout: 0});
