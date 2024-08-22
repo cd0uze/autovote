@@ -41,7 +41,7 @@ const response = await connect({
 
 const {browser, setTarget} = response,
 browser2 = await puppeteer.launch({
-  headless: false,
+  headless: true,
   args: [
     `--disable-extensions-except=${Ext}`, 
     `--load-extension=${Ext}`,
