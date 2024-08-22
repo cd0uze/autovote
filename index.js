@@ -130,7 +130,9 @@ if(Config.sites[i].cloudflare){
         if(Config.sites[i].index !== 1 && Config.sites[i].index !== 2 && Config.sites[i].index !== 7) await page.waitForNavigation({timeout: 0});
 
         if(Config.sites[i].index == 1){
-            await page.waitForSelector("button[class='btn btn-primary btn-lg btn-block']", {timeout: 0})
+            await page.waitForSelector("button[class='btn btn-primary btn-lg btn-block']", {timeout: 0});
+
+            const Result = 
         }
                 if(Config.sites[i].index == 4) {
                 await page.waitForSelector("div[class='modal-body text-center']", {timeout: 0});
