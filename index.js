@@ -210,4 +210,4 @@ for (const i in Config.sites) {
 };
 
 
-autovote(1)
+//autovote(1)
