@@ -134,7 +134,9 @@ if(Config.sites[i].cloudflare){
 
             const Result = await page.evaluate(() => document.getElementsByClassName("btn btn-primary btn-lg btn-block")[0].textContent);
 
-            if(Result.includes("Thanks for voting!")) 
+            if(Result.includes("Thanks for voting!")) {
+                
+            }
         }
                 if(Config.sites[i].index == 4) {
                 await page.waitForSelector("div[class='modal-body text-center']", {timeout: 0});
