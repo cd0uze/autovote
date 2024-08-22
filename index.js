@@ -210,4 +210,4 @@ await check();
 };
 /*
 
-//autovote(1)
+autovote(1)
