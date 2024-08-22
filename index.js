@@ -177,7 +177,7 @@ if(Config.sites[i].cloudflare){
                 if(Config.sites[i].voteCooldown) await sleep((Config.sites[i].voteCooldown+5)*1000);            
 
                 const Url = await page.url();
-                console.log("Website " + Config.sites[i].index + " | " + Url):
+                console.log("Website " + Config.sites[i].index + " | " + Url);
 
                 if(Url === Config.sites[i].voteUrl) {
                     console.log("Website " + Config.sites[i].index + " | Vote added !");
