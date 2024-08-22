@@ -127,8 +127,21 @@ if(Config.sites[i].cloudflare){
 
         console.log("Website " + Config.sites[i].index + " | Waiting for vote...");
 
-        if(Config.sites[i].index !== 2 && Config.sites[i].index !== 7) await page.waitForNavigation({timeout: 0});
+        if(Config.sites[i].index !== 1 && Config.sites[i].index !== 2 && Config.sites[i].index !== 7) await page.waitForNavigation({timeout: 0});
 
+        if(Config.sites[i].index == 1){
+            await page.waitForSelector("button[class='btn btn-primary btn-lg btn-block']", {timeout: 0});
+
+            const Result = await page.evaluate(() => document.getElementsByClassName("btn btn-primary btn-lg btn-block")[0]?.textContent);
+
+            if(Result.includes("Thanks for voting!")) {
+                console.log("Website " + Config.sites[i].index + " | Vote added !");
+                resolve();
+            } else {
+                console.log("Website " + Config.sites[i].index + " | Unknown error !");
+                resolve();
+            }
+        }
                 if(Config.sites[i].index == 4) {
                 await page.waitForSelector("div[class='modal-body text-center']", {timeout: 0});
 
@@ -166,7 +179,7 @@ if(Config.sites[i].cloudflare){
                 const Url = await page.url();
                 console.log("Website " + Config.sites[i].index + " | " + Url)
 
-                if(Config.sites[i].index == 2 && !Url.includes("vote")) {
+                if(Config.sites[i].index == 1 && !Url.includes("vote")) {
                     console.log("Website " + Config.sites[i].index + " | Vote added !");
                     resolve()
                 } else if(Config.sites[i].index == 1 && Url.includes("vote")) {
@@ -192,9 +205,9 @@ await check();
 }).catch(err => console.log("Website " + Config.sites[i].index + " | " + err.message));
 };
 
-/*for (const i in Config.sites) {
+for (const i in Config.sites) {
     await autovote(i);
 };
-*/
 
-autovote(0)
+
+//autovote(1)
