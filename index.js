@@ -155,6 +155,7 @@ if(Config.sites[i].cloudflare){
                 }
             }
         }
+        }
 
             if(Config.sites[i].index == 7) {
             await page.waitForFunction('document.getElementById("voteerror").textContent !== "Please Wait...."', {timeout: 0});
