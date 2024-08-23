@@ -123,10 +123,11 @@ if(Config.sites[i].cloudflare){
         clearInterval(Interval3);
 
         await page.focus(`input[name=${Config.sites[i].input}]`);
-        if(Config.sites[i].index !== 2 && Config.sites[i].index !== 7) await page.waitForNavigation({timeout: 0});
         await page.keyboard.press("Enter");
 
         console.log("Website " + Config.sites[i].index + " | Waiting for vote...");
+
+        if(Config.sites[i].index !== 2 && Config.sites[i].index !== 7) await page.waitForNavigation({timeout: 0});
 
                 if(Config.sites[i].index == 4) {
                 await page.waitForSelector("div[class='modal-body text-center']", {timeout: 0});
