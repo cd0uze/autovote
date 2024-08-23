@@ -123,6 +123,7 @@ if(Config.sites[i].cloudflare){
         clearInterval(Interval3);
 
         await page.focus(`input[name=${Config.sites[i].input}]`);
+        if(Config.sites[i].index !== 2 && Config.sites[i].index !== 7) await page.waitForNavigation({timeout: 0});
         await page.keyboard.press("Enter");
 
         console.log("Website " + Config.sites[i].index + " | Waiting for vote...");
