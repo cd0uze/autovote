@@ -70,7 +70,7 @@ async function autovote(i) {
     console.log("Website " + Config.sites[i].index + " | Website opened !");
 
 await page.screenshot({path: 'screenshot.png'});
-    
+
     await page.waitForSelector(`input[name=${Config.sites[i].input}]`, {timeout: 0}).catch(async err => {
         await page.close();
         console.log("Website " + Config.sites[i].index + " | " + err.message);
@@ -203,9 +203,9 @@ await check();
 }).catch(err => console.log("Website " + Config.sites[i].index + " | " + err.message));
 };
 
-for (const i in Config.sites) {
+/*for (const i in Config.sites) {
     await autovote(i);
 };
-
+*/
 
 //autovote(0)
