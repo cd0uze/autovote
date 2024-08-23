@@ -127,7 +127,7 @@ if(Config.sites[i].cloudflare){
 
         console.log("Website " + Config.sites[i].index + " | Waiting for vote...");
 
-        if(![1, 2, 7].includes(Config.sites[i].index)Config.sites[i].index !==1 && Config.sites[i].index !== 2 && Config.sites[i].index !== 7) await page.waitForNavigation({timeout: 0});
+        if(![1, 2, 7].includes(Config.sites[i].index)) await page.waitForNavigation({timeout: 0});
 
         if(Config.sites[i].index == 1) {
             await page.waitForSelector("button[class='btn btn-primary btn-lg btn-block']", {timeout: 0});
