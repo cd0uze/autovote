@@ -137,6 +137,7 @@ if(Config.sites[i].cloudflare){
                 console.log("Website " + Config.sites[i].index + " | Vote added !");
                 resolve();
             }
+        }, 5000);
         }
 
                 if(Config.sites[i].index == 4) {
