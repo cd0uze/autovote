@@ -131,8 +131,8 @@ if(Config.sites[i].cloudflare){
 
         if(Config.sites[i].index == 1) {
             console.log((await page.url()));
-            await page.waitForSelector("button[class='btn btn-primary btn-lg btn-block']", {timeout: 0}).catch(err =>{
-                
+            await page.waitForSelector("button[class='btn btn-primary btn-lg btn-block']", {timeout: 0}).catch(async () =>{
+
             })
 
             const Result = await page.evaluate(() => document.getElementsByClassName("btn btn-primary btn-lg btn-block")[0]?.textContent);
