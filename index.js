@@ -144,6 +144,7 @@ if(Config.sites[i].cloudflare){
 
                 if(Result) {
                 console.log(Result)
+                
                 if(Result.includes("Thank you for voting!")) {
                     console.log("Website " + Config.sites[i].index + " | Vote added !");
                     resolve();
