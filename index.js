@@ -134,7 +134,7 @@ if(Config.sites[i].cloudflare){
                 console.log("Website " + Config.sites[i].index + " | " + err.message);
                 console.log("Website " + Config.sites[i].index + " | Unknown error !");
                 resolve();
-            })
+            });
 
             const Result = await page.evaluate(() => document.getElementsByClassName("btn btn-primary btn-lg btn-block")[0]?.textContent);
 
