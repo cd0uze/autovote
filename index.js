@@ -135,7 +135,6 @@ if(Config.sites[i].cloudflare){
 
             if(Result) {
                 clearInterval(Interval4);
-                console.log(Result);
 
             if(Result.includes("Thanks for voting!")) {
                 console.log("Website " + Config.sites[i].index + " | Vote added !");
