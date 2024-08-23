@@ -128,20 +128,7 @@ if(Config.sites[i].cloudflare){
         console.log("Website " + Config.sites[i].index + " | Waiting for vote...");
 
         if(Config.sites[i].index !== 1 && Config.sites[i].index !== 2 && Config.sites[i].index !== 7) await page.waitForNavigation({timeout: 0});
-
-        if(Config.sites[i].index == 1){
-            await page.waitForSelector("button[class='btn btn-primary btn-lg btn-block']", {timeout: 0});
-
-            const Result = await page.evaluate(() => document.getElementsByClassName("btn btn-primary btn-lg btn-block")[0]?.textContent);
-
-            if(Result.includes("Thanks for voting!")) {
-                console.log("Website " + Config.sites[i].index + " | Vote added !");
-                resolve();
-            } else {
-                console.log("Website " + Config.sites[i].index + " | Unknown error !");
-                resolve();
-            }
-        }
+        
                 if(Config.sites[i].index == 4) {
                 await page.waitForSelector("div[class='modal-body text-center']", {timeout: 0});
 
