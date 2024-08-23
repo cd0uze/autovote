@@ -130,12 +130,6 @@ if(Config.sites[i].cloudflare){
         if(![1, 2, 7].includes(Config.sites[i].index)) await page.waitForNavigation({timeout: 0});
 
         if(Config.sites[i].index == 1) {
-            await page.waitForSelector("button[class='btn btn-primary btn-lg btn-block']", {timeout: 0}).catch(async err => {
-                console.log("Website " + Config.sites[i].index + " | " + err.message);
-                console.log("Website " + Config.sites[i].index + " | Unknown error !");
-                await page.close();
-            });
-
             const Result = await page.evaluate(() => document.getElementsByClassName("btn btn-primary btn-lg btn-block")[0]?.textContent);
 
             if(Result.includes("Thanks for voting!")) {
@@ -147,7 +141,7 @@ if(Config.sites[i].cloudflare){
                 if(Config.sites[i].index == 4) {
                 await page.waitForSelector("div[class='modal-body text-center']", {timeout: 0});
 
-                const Result = await page.evaluate(() => document.getElementsByClassName("modal-body text-center")[0]?.textContent);
+                const Result = await page.evaluate(() => document.getElementsByClassName("modal-body text-center")[0]?.textContent) || await page.evaluate(() => document.getElementsByClassName("alert alert-danger")[0]?.textContent);
 
                 if(Result.includes("Thank you for voting!")) {
                     console.log("Website " + Config.sites[i].index + " | Vote added !");
