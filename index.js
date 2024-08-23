@@ -133,10 +133,12 @@ if(Config.sites[i].cloudflare){
             const Interval4 = setInterval(async function() {
             const Result = await page.evaluate(() => document.getElementsByClassName("btn btn-primary btn-lg btn-block")[0]?.textContent);
 
+            if(Result) {
             if(Result.includes("Thanks for voting!")) {
                 console.log("Website " + Config.sites[i].index + " | Vote added !");
                 resolve();
             }
+        }
         }, 5000);
         }
 
