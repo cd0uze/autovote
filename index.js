@@ -130,6 +130,7 @@ if(Config.sites[i].cloudflare){
         if(![1, 2, 7].includes(Config.sites[i].index)) await page.waitForNavigation({timeout: 0});
 
         if(Config.sites[i].index == 1) {
+            const Interval4 = setInterval(async function() {
             const Result = await page.evaluate(() => document.getElementsByClassName("btn btn-primary btn-lg btn-block")[0]?.textContent);
 
             if(Result.includes("Thanks for voting!")) {
