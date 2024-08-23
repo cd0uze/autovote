@@ -143,7 +143,7 @@ if(Config.sites[i].cloudflare){
                 const Result = await page.evaluate(() => document.getElementsByClassName("modal-body text-center")[0]?.textContent) || await page.evaluate(() => document.getElementsByClassName("alert alert-danger")[0]?.textContent);
 
                 if(Result) {
-                    clearInterval(Interval4)
+                    clearInterval(Interval4);
                 console.log(Result)
 
                 if(Result.includes("Thank you for voting!")) {
