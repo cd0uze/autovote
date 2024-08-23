@@ -128,7 +128,6 @@ if(Config.sites[i].cloudflare){
         console.log("Website " + Config.sites[i].index + " | Waiting for vote...");
 
         if(![1, 2, 7].includes(Config.sites[i].index)) await page.waitForNavigation({timeout: 0});
-        console.log(![1, 2, 7].includes(Config.sites[i].index))
 
         if(Config.sites[i].index == 1) {
             console.log((await page.url()));
