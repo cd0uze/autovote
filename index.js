@@ -34,7 +34,7 @@ async function sleep(ms){
 };
 
 const response = await connect({
-    headless: "auto",
+    headless: true,
     fingerprint: false,
     turnstile: true,
 });
