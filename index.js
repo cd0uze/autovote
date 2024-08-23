@@ -139,7 +139,7 @@ if(Config.sites[i].cloudflare){
         }
 
                 if(Config.sites[i].index == 4) {
-                    const Interval4 = setInterval(async function(){
+                    const Interval4 = setInterval(async function() {
                 const Result = await page.evaluate(() => document.getElementsByClassName("modal-body text-center")[0]?.textContent) || await page.evaluate(() => document.getElementsByClassName("alert alert-danger")[0]?.textContent);
 
                 if(Result) {
