@@ -146,7 +146,7 @@ if(Config.sites[i].cloudflare){
         }
 
                 if(Config.sites[i].index == 4) {
-                const Result = await page.evaluate(() => document.getElementsByClassName("modal-body text-center")[0]?.textContent) || await page.evaluate(() => document.getElementsByClassName("alert alert-danger")[0]?.textContent);
+                const Result = await page.evaluate(() => document.getElementsByClassName("modal-body text-center")[0]?.textContent);
 
                 if(Result.includes("Thank you for voting!")) {
                     console.log("Website " + Config.sites[i].index + " | Vote added !");
