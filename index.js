@@ -133,7 +133,7 @@ if(Config.sites[i].cloudflare){
             await page.waitForSelector("button[class='btn btn-primary btn-lg btn-block']", {timeout: 0}).catch(async err => {
                 console.log("Website " + Config.sites[i].index + " | " + err.message);
                 console.log("Website " + Config.sites[i].index + " | Unknown error !");
-                await page.close()
+                await page.close();
             });
 
             const Result = await page.evaluate(() => document.getElementsByClassName("btn btn-primary btn-lg btn-block")[0]?.textContent);
