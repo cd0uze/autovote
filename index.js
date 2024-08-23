@@ -146,7 +146,7 @@ if(Config.sites[i].cloudflare){
                 if(Result.includes("Thank you for voting!")) {
                     console.log("Website " + Config.sites[i].index + " | Vote added !");
                     resolve();
-                } else {
+                } else if(Result.includes("Someone has already voted"))
                     console.log("Website " + Config.sites[i].index + " | Unknown error !");
                     resolve();
                 }
