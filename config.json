@@ -1,9 +1,11 @@
 {
-	"username": "pyzeidkz",
+	"username": "idkmyze",
 	"sites":[
 	{
 		"index": 1,
 		"url": "https://topminecraftservers.org/vote/18687",
+		"voteUrl": "hhttps://topminecraftservers.org/server/18687",
+		"voteConfirm": true,
 		"input": "mc_username",
 		"turnstile": true
 	},
