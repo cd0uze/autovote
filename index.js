@@ -154,7 +154,7 @@ if(Config.sites[i].cloudflare){
                     resolve();
                 }
             }
-        },
+        }, 5000
         }
 
             if(Config.sites[i].index == 7) {
