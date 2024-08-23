@@ -100,7 +100,7 @@ if(Config.sites[i].cloudflare){
     if(Config.sites[i].captcha){
         console.log("Website " + Config.sites[i].index + " | Solving Captcha...");
 
-        const Interval2 = setInterval(async function(){
+        const Interval2 = setInterval(async function() {
         const Frame = await page.frames().find(f => f.name().startsWith("a-"));
 
         if(Frame) {
