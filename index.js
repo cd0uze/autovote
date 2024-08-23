@@ -203,6 +203,6 @@ await check();
 for (const i in Config.sites) {
     await autovote(i);
 };
-*/
+
 
 autovote(0)
