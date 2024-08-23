@@ -139,7 +139,7 @@ if(Config.sites[i].cloudflare){
                 resolve();
             } else if(Result.includes("Someone has already voted")) {
                 console.log("Website " + Config.sites[i].index + " | Unknown error !");
-                    resolve();
+                resolve();
             }
         }
         }, 5000);
