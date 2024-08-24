@@ -1,5 +1,5 @@
 import express from 'express';
-const { autovote } = require("./scrapeLogic");
+const { loop } = require("./scrapeLogic");
 
 const app = express();
 const PORT = process.env.PORT || 4000;
