@@ -204,9 +204,9 @@ await check();
 }).catch(err => console.log("Website " + Config.sites[i].index + " | " + err.message));
 };
 
-for (const i in Config.sites) {
+/*for (const i in Config.sites) {
     await autovote(i);
 };
+*/
 
-
-//autovote(0)
+autovote(1)
