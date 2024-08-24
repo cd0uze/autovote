@@ -140,7 +140,9 @@ if(Config.sites[i].cloudflare){
             if(Result.includes("Thanks for voting!")) {
                 console.log("Website " + Config.sites[i].index + " | Vote added !");
                 resolve();
-            } else ifResult === "You either waited too long to submit the form or you failed the captcha test."
+            } else if(Result === "You either waited too long to submit the form or you failed the captcha test.") {
+                await check()
+            }
 
             if(Result.includes("Someone has already voted")) {
                 console.log("Website " + Config.sites[i].index + " | Unknown error !");
