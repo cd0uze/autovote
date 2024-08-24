@@ -7,6 +7,6 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
 WORKDIR /usr/src/app
 
 COPY package*.json ./
-RUN apt-get install xvfb && npm ci
+RUN npm ci
 COPY . .
 CMD [ "node", "index.js" ]
