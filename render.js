@@ -1,5 +1,5 @@
 import express from 'express';
-const { loop } = require("./scrapeLogic");
+const { loop } from './index.js';
 
 const app = express();
 const PORT = process.env.PORT || 4000;
