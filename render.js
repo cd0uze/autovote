@@ -1,5 +1,5 @@
 import express from 'express';
-import {jsp} from './index.js';
+import {jsp from './index.js';
 
 const app = express();
 const PORT = process.env.PORT || 4000;
