@@ -184,7 +184,7 @@ await check();
 }).catch(err => console.log("Website " + Config.sites[i].index + " | " + err.message));
 };
 
-async function loop() {
+export async function loop() {
 for (const i in Config.sites) {
     await autovote(i);
 };
