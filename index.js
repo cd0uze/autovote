@@ -31,7 +31,7 @@ async function sleep(ms) {
 
 const {browser, setTarget} = response,
 */
-const browser =  await puppeteer.launch({
+const browser = await puppeteer.launch({
   headless: true,
   args: [
     `--disable-extensions-except=${Ext}`, 
