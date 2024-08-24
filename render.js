@@ -4,12 +4,8 @@ const { loop } = require("./scrapeLogic");
 const app = express();
 const PORT = process.env.PORT || 4000;
 
-app.get("/scrape", (req, res) => {
-  loop();
-});
-
 app.get("/", (req, res) => {
-  res.send("Render Puppeteer server is up and running!");
+  loop();
 });
 
 app.listen(PORT, () => {
