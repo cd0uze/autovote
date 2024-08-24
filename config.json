@@ -10,7 +10,7 @@
 	{
 		"index": 2,
 		"url": "https://best-minecraft-servers.co/server-jartexnetwork.4402/vote",
-		"voteUrl": ["https://best-minecraft-servers.co/", ""],
+		"voteUrl": ["https://best-minecraft-servers.co/", "https://best-minecraft-servers.co/landing"],
 		"voteConfirm": true,
 		"voteCooldown": 10,
 		"input": "username"
