@@ -1,5 +1,5 @@
 import express from 'express';
-const { loop } from './index.js';
+import { loop } from './index.js';
 
 const app = express();
 const PORT = process.env.PORT || 4000;
