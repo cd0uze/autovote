@@ -17,6 +17,10 @@ const response = await connect({
     headless: "auto",
     fingerprint: false,
     turnstile: true,
+    executablePath:
+      process.env.NODE_ENV === "production"
+        ? process.env.PUPPETEER_EXECUTABLE_PATH
+        : puppeteer.executablePath(),
 });
 
 const {browser, setTarget} = response,
