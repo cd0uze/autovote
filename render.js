@@ -1,5 +1,5 @@
 const express = require("express");
-const {  } = require("./scrapeLogic");
+const { bp } = require("./scrapeLogic");
 const app = express();
 
 const PORT = process.env.PORT || 4000;
