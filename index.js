@@ -33,7 +33,7 @@ browser2 = await puppeteer.launch({
     "--disable-setuid-sandbox",
     "--no-sandbox",
     "--single-process",
-      "--no-zygote",
+    "--no-zygote",
   ],
   executablePath:
       process.env.NODE_ENV === "production"
