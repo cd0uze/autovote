@@ -4,6 +4,14 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
     PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable \
      NODE_ENV=production
 
+     RUN apt-get update && apt-get install -y \
+    wget \
+    gnupg \
+    ca-certificates \
+    apt-transport-https \
+    xvfb \
+    && rm -rf /var/lib/apt/lists/*
+
 WORKDIR /usr/src/app
 
 COPY package*.json ./
