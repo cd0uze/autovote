@@ -31,7 +31,7 @@ browser2 = await puppeteer.launch({
     `--load-extension=${Ext}`,
     '--enable-automation',
     "--disable-setuid-sandbox",
-      "--no-sandbox",
+    "--no-sandbox",
       "--single-process",
       "--no-zygote",
   ],
