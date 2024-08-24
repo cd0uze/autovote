@@ -15,6 +15,12 @@ async function sleep(ms) {
 
 const response = await connect({
     headless: "auto",
+    args: [
+      "--disable-setuid-sandbox",
+      "--no-sandbox",
+      "--single-process",
+      "--no-zygote",
+    ],
     fingerprint: false,
     turnstile: true,
     executablePath:
