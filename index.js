@@ -6,25 +6,6 @@ import express from 'express';
 import https from 'node:https'
 import Config from './config.json' with { type: "json" };
 
-if (process.platform !== "win32") {
-    const app = express();
-    const port = 3000;
-    
-    app.get('/', (req, res) => {
-      res.send("Testing...")
-    })
-    
-    app.listen(port, () => {
-      console.log(port)
-    })
-    
-    function get() {
-      https.get("https://autovote.onrender.com");
-    }
-    
-    setInterval(get, 300000);
-}
-
 puppeteer.use(StealthPlugin());
 
 const Ext = path.join(process.cwd(), "./0.4.12_0");
