@@ -32,7 +32,7 @@ browser2 = await puppeteer.launch({
     '--enable-automation',
     "--disable-setuid-sandbox",
     "--no-sandbox",
-      "--single-process",
+    "--single-process",
       "--no-zygote",
   ],
   executablePath:
