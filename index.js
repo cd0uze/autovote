@@ -13,7 +13,7 @@ async function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 };
 
-const response = await connect({
+/*const response = await connect({
     headless: "auto",
     args: [
       "--disable-setuid-sandbox",
@@ -30,6 +30,24 @@ const response = await connect({
 });
 
 const {browser, setTarget} = response,
+*/
+const browser = await puppeteer.launch({
+  headless: true,
+  args: [
+    `--disable-extensions-except=${Ext}`, 
+    `--load-extension=${Ext}`,
+    '--enable-automation',
+    "--disable-setuid-sandbox",
+    "--no-sandbox",
+    "--single-process",
+    "--no-zygote",
+  ],
+  executablePath:
+      process.env.NODE_ENV === "production"
+        ? process.env.PUPPETEER_EXECUTABLE_PATH
+        : puppeteer.executablePath(),
+        targetFilter: (target) => target.type() !== 'other' || !!target.url(),
+}).catch(err => console.log(err)),
 browser2 = await puppeteer.launch({
   headless: true,
   args: [
@@ -48,7 +66,7 @@ browser2 = await puppeteer.launch({
   targetFilter: null
 }).catch(err => console.log(err));
 
-setTarget({status: false});
+//setTarget({status: false});
 
 async function autovote(i) {
     await (Config.sites[i].turnstile ? browser : browser2).newPage().then(async page => {
