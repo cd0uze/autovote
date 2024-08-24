@@ -183,9 +183,10 @@ await check();
 }).catch(err => console.log("Website " + Config.sites[i].index + " | " + err.message));
 };
 
-/*for (const i in Config.sites) {
+async function loop() {
+for (const i in Config.sites) {
     await autovote(i);
 };
-*/
+}
 
 autovote(1)
