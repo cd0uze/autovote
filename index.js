@@ -8,7 +8,7 @@ puppeteer.use(StealthPlugin());
 
 const Ext = path.join(process.cwd(), "./0.4.12_0");
 
-async function sleep(ms){
+async function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 };
 
