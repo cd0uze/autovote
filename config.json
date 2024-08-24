@@ -12,7 +12,7 @@
 		"url": "https://best-minecraft-servers.co/server-jartexnetwork.4402/vote",
 		"voteUrl": "https://best-minecraft-servers.co/",
 		"voteConfirm": true,
-		"voteCooldown": 10,
+		"voteCooldown": 15,
 		"input": "username"
 	},
 	{
