@@ -198,4 +198,4 @@ for (const i in Config.sites) {
 };
 }
 
-module.exports = {loop()}
+module.exports = {loop}
