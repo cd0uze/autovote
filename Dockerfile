@@ -1,8 +1,4 @@
-FROM node:latest
-RUN npm config set registry https://registry.npmjs.org/
-RUN npm cache clean --force
-
- RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y \
     wget \
     gnupg \
     ca-certificates \
