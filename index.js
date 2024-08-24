@@ -27,6 +27,10 @@ browser2 = await puppeteer.launch({
     `--load-extension=${Ext}`,
     '--enable-automation'
   ],
+  executablePath:
+      process.env.NODE_ENV === "production"
+        ? process.env.PUPPETEER_EXECUTABLE_PATH
+        : puppeteer.executablePath(),
   targetFilter: null
 }).catch(err => console.log(err));
 
