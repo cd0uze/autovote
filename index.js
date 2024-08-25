@@ -36,7 +36,7 @@ browser2 = await puppeteer.launch({
     `--disable-extensions-except=${Ext}`, 
     `--load-extension=${Ext}`,
     '--enable-automation',
-     '--no-sandbox', 
+    '--no-sandbox', 
     '--disable-gpu', 
   ],
  executablePath: '/usr/bin/chromium-browser',
