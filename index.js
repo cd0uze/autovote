@@ -193,7 +193,7 @@ await check();
 }).catch(err => console.log("Website " + Config.sites[i].index + " | " + err.message));
 };
 
-const jsp = async () => {
+export const jsp = async () => {
 for (const i in Config.sites) {
     await autovote(i);
 };
