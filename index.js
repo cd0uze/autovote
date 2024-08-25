@@ -19,7 +19,6 @@ const response = await connect({
     '--no-sandbox', 
     '--disable-gpu',
     ],
-    */
     fingerprint: false,
     turnstile: true,
     executablePath: process.env.NODE_ENV === "production"
