@@ -15,10 +15,11 @@ async function sleep(ms) {
 
 const response = await connect({
     headless: "auto",
-    args: [
+    /*args: [
     '--no-sandbox', 
     '--disable-gpu',
     ],
+    */
     fingerprint: false,
     turnstile: true,
     executablePath: process.env.NODE_ENV === "production"
