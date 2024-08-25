@@ -4,7 +4,7 @@ const port = process.env.PORT || 3000
 
 const app = express();
 
-app.get("/", (req, res) => {
+app.get("/autovote", (req, res) => {
   res.send("Autovote is running now !")
   jsp();
 });
