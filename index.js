@@ -16,7 +16,7 @@ async function sleep(ms) {
 const response = await connect({
     headless: "auto",
     args: [
-        '--no-sandbox', 
+    '--no-sandbox', 
     '--disable-gpu',
     ],
     fingerprint: false,
