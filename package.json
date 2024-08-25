@@ -12,7 +12,8 @@
     "puppeteer-extra-plugin-capsolver": "^2.0.1",
     "puppeteer-extra-plugin-stealth": "^2.11.2",
     "puppeteer-real-browser": "^1.2.31",
-    "read-browser-cookies": "^0.2.0"
+    "read-browser-cookies": "^0.2.0",
+    "xvfb": "^0.4.0"
   },
   "type": "module"
 }
