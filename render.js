@@ -8,3 +8,7 @@ app.get("/", (req, res) => {
   res.send("Autovote is running now !")
   jsp();
 });
+
+app.listen(port, () => {
+  console.log(`App is listening on port ${port}`)
+});
