@@ -20,7 +20,7 @@ PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
 
 COPY . /app
 
-RUN npm install
+RUN npm ci
 
 EXPOSE 3000
 
