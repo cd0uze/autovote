@@ -29,8 +29,6 @@ browser2 = await puppeteer.launch({
     `--disable-extensions-except=${Ext}`, 
     `--load-extension=${Ext}`,
     '--enable-automation',
-    '--no-sandbox', 
-    '--disable-gpu', 
   ],
  executablePath: process.env.NODE_ENV === "production"
         ? process.env.PUPPETEER_EXECUTABLE_PATH
