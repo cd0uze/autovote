@@ -36,7 +36,6 @@ browser2 = await puppeteer.launch({
  executablePath: '/usr/bin/chromium-browser',
   targetFilter: null
 }).catch(err => console.log(err));
-
 setTarget({status: false});
 
 async function autovote(i) {
