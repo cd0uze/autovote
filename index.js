@@ -20,7 +20,7 @@ const response = await connect({
     ],
     fingerprint: false,
     turnstile: true,
-    executablePath: '/usr/bin/google-chrome-stable'
+    executablePath: '/usr/bin/chromium-browser'
 });
 
 const {browser, setTarget} = response,
@@ -33,7 +33,7 @@ browser2 = await puppeteer.launch({
     '--no-sandbox', 
     '--disable-gpu', 
   ],
- executablePath: '',
+ executablePath: '/usr/bin/chromium-browser',
   targetFilter: null
 }).catch(err => console.log(err));
 setTarget({status: false});
