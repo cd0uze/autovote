@@ -20,7 +20,7 @@ const response = await connect({
     ],
     fingerprint: false,
     turnstile: true,
-    executablePath: '/usr/bin/chromium-browser';
+    executablePath: '/usr/bin/chromium-browser'
 });
 
 const {browser, setTarget} = response,
