@@ -21,7 +21,9 @@ const response = await connect({
     ],
     fingerprint: false,
     turnstile: true,
-    executablePath: '/usr/bin/chromium-browser'
+    executablePath: process.env.NODE_ENV === "production"
+        ? process.env.PUPPETEER_EXECUTABLE_PATH
+        : puppeteer.executablePath(),
 });
 
 const {browser, setTarget} = response,
