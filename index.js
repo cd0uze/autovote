@@ -13,7 +13,7 @@ async function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 };
 
-/*const response = await connect({
+const response = await connect({
     headless: "auto",
     args: [
       "--disable-setuid-sandbox",
@@ -30,7 +30,8 @@ async function sleep(ms) {
 });
 
 const {browser, setTarget} = response,
-*/
+
+
 const browser = await puppeteer.launch({
   headless: true,
   args: [
