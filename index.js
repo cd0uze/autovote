@@ -24,7 +24,7 @@ const response = await connect({
     executablePath: process.env.NODE_ENV === "production"
         ? process.env.PUPPETEER_EXECUTABLE_PATH
         : puppeteer.executablePath()
-});
+}).catch(err => console.log(err))
 
 const {page, browser, setTarget} = response,
 browser2 = await puppeteer.launch({
