@@ -26,7 +26,7 @@ const response = await connect({
         : puppeteer.executablePath()
 });
 
-const {browser, setTarget} = response,
+const {page, browser, setTarget} = response,
 browser2 = await puppeteer.launch({
   headless: true,
   args: [
