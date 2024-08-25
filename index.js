@@ -30,25 +30,6 @@ const response = await connect({
 });
 
 const {browser, setTarget} = response,
-
-
-const browser = await puppeteer.launch({
-  headless: true,
-  args: [
-    `--disable-extensions-except=${Ext}`, 
-    `--load-extension=${Ext}`,
-    '--enable-automation',
-    "--disable-setuid-sandbox",
-    "--no-sandbox",
-    "--single-process",
-    "--no-zygote",
-  ],
-  executablePath:
-      process.env.NODE_ENV === "production"
-        ? process.env.PUPPETEER_EXECUTABLE_PATH
-        : puppeteer.executablePath(),
-        targetFilter: (target) => target.type() !== 'other' || !!target.url(),
-}).catch(err => console.log(err)),
 browser2 = await puppeteer.launch({
   headless: true,
   args: [
