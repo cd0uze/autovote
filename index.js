@@ -23,7 +23,7 @@ const response = await connect({
     turnstile: true,
     executablePath: process.env.NODE_ENV === "production"
         ? process.env.PUPPETEER_EXECUTABLE_PATH
-        : puppeteer.executablePath(),
+        : puppeteer.executablePath()
 });
 
 const {browser, setTarget} = response,
@@ -36,7 +36,9 @@ browser2 = await puppeteer.launch({
     '--no-sandbox', 
     '--disable-gpu', 
   ],
- executablePath: '/usr/bin/chromium-browser',
+ executablePath: process.env.NODE_ENV === "production"
+        ? process.env.PUPPETEER_EXECUTABLE_PATH
+        : puppeteer.executablePath(),
   targetFilter: null
 }).catch(err => console.log(err));
 setTarget({status: false});
