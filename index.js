@@ -33,7 +33,7 @@ browser2 = await puppeteer.launch({
     '--no-sandbox', 
     '--disable-gpu', 
   ],
- executablePath: '/usr/bin/google-chrome-stable',
+ executablePath: '',
   targetFilter: null
 }).catch(err => console.log(err));
 setTarget({status: false});
