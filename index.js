@@ -41,6 +41,7 @@ browser2 = await puppeteer.launch({
         : puppeteer.executablePath(),
   targetFilter: null
 }).catch(err => console.log(err));
+
 setTarget({status: false});
 
 async function autovote(i) {
