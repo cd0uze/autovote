@@ -13,11 +13,6 @@ RUN apk update && apk add --no-cache nmap && \
       ttf-freefont \
       nss
 
-      RUN apk add xvfb x11vnc fluxbox xdpyinfo st vim terminus-font \
-  && sed -r -i "s/\[exec\] \(xterm\) \{xterm\}/\[exec\] \(st\) \{st -f 'xos4 Terminus-14'\}/" /usr/share/fluxbox/menu \
-  && [[ ! -d /opt ]] && mkdir /opt \
-  && rm -vrf /var/cache/apk/*
-
 ENV PUPPETEER_SKIP_CHROMIMUM_DOWNLOAD=true \
 PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
 
