@@ -13,7 +13,7 @@ RUN apk update && apk add --no-cache nmap && \
       ttf-freefont \
       nss
 
-ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+ENV PUPPETEER_SKIP_CHROMIMUM_DOWNLOAD=true
 
 COPY . /app
 
