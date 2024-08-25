@@ -36,15 +36,9 @@ browser2 = await puppeteer.launch({
     `--disable-extensions-except=${Ext}`, 
     `--load-extension=${Ext}`,
     '--enable-automation',
-    "--disable-setuid-sandbox",
-    "--no-sandbox",
-    "--single-process",
-    "--no-zygote",
+    
   ],
-  executablePath:
-      process.env.NODE_ENV === "production"
-        ? process.env.PUPPETEER_EXECUTABLE_PATH
-        : puppeteer.executablePath(),
+ executablePath: '/usr/bin/chromium-browser',
   targetFilter: null
 }).catch(err => console.log(err));
 
