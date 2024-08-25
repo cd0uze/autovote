@@ -22,7 +22,7 @@ const response = await connect({
     */
     fingerprint: false,
     turnstile: true,
-    executablePath: process.env.NODE_ENV === "production"
+    //executablePath: process.env.NODE_ENV === "production"
         ? process.env.PUPPETEER_EXECUTABLE_PATH
         : puppeteer.executablePath()
 }).catch(err => console.log(err))
