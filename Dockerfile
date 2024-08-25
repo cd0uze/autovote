@@ -12,8 +12,7 @@ RUN apk update && apk add --no-cache nmap && \
       "freetype>2.8" \
       ttf-freefont \
       nss \
-      xvfb \
-      xvfb-run
+      xvfb 
 
 ENV PUPPETEER_SKIP_CHROMIMUM_DOWNLOAD=true \
 PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
