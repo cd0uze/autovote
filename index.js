@@ -119,7 +119,7 @@ if(Config.sites[i].cloudflare){
             if(Result.includes("Thanks for voting!")) {
                 console.log("Website " + Config.sites[i].index + " | Vote added !");
                 resolve();
-            } else if(Result.includes("You either waited too long") {
+            } else if(Result.includes("You either waited too long")) {
                 console.log("Website " + Config.sites[i].index + " | Error occured.Voting again...");
                 await check();
             } else {
