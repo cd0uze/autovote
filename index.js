@@ -197,5 +197,5 @@ setInterval(async function() {
 for (const i in Config.sites) {
     await autovote(i);
 };
-}, 60*60*24*1000);
+}, 60*60*12*1000);
 
