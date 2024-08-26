@@ -16,10 +16,7 @@ async function sleep(ms) {
 const response = await connect({
     headless: "auto",
     fingerprint: false,
-    turnstile: true,
-    executablePath: process.env.NODE_ENV === "production"
-        ? process.env.PUPPETEER_EXECUTABLE_PATH
-        : puppeteer.executablePath()
+    turnstile: true
 }).catch(err => console.log(err))
 
 const {page, browser, setTarget} = response,
