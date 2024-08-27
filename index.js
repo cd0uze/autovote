@@ -18,7 +18,8 @@ async function sleep(ms) {
     turnstile: true
 }).catch(err => console.log(err));*/
 
-const {page, browser, setTarget} = response,
+//const {page, browser, setTarget} = response,
+const 
 browser2 = await puppeteer.launch({
   headless: true,
   args: [
