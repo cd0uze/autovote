@@ -20,6 +20,8 @@ PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
 
 COPY . /app
 
+RUN npm ci
+
 ARG PORT
 EXPOSE ${PORT:-3000}
 
