@@ -21,6 +21,7 @@ const response = await connect({
       ],
       customConfig: {
         chromeFlags: ['--timeout=0']
+    }
     fingerprint: false,
     turnstile: true
 }).catch(err => console.log(err));
