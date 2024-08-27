@@ -20,6 +20,7 @@ const response = await connect({
         '--timeout=0'
       ],
       customConfig: {
+        chromePath: string,
         chromeFlags: ['--timeout=0']
     }
     fingerprint: false,
