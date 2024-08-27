@@ -6,7 +6,7 @@ const app = express();
 
 app.get("/autovote", (req, res) => {
   res.send("Autovote is running now !")
-  jsp();
+  voteloop();
 });
 
 app.listen(port, () => {
