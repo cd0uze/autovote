@@ -184,7 +184,6 @@ export async function voteloop() {
 for (const i in Config.sites) {
     await autovote(i);
 };
-}
+};
 
-
-//autovote(5)
+setInterval(voteloop, 60*60*12*1000)
