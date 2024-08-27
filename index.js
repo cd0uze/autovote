@@ -30,6 +30,7 @@ browser2 = await puppeteer.launch({
     `--disable-extensions-except=${Ext}`, 
     `--load-extension=${Ext}`,
     '--enable-automation',
+    '--no-sandbox',
   ],
   targetFilter: null
 }).catch(err => console.log(err));
