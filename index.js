@@ -19,6 +19,8 @@ const response = await connect({
         '--no-sandbox',
         '--timeout=0'
       ],
+      customConfig: {
+        
     fingerprint: false,
     turnstile: true
 }).catch(err => console.log(err));
