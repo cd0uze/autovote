@@ -20,7 +20,7 @@ const response = await connect({
       ],
       customConfig: {
         chromePath: '/usr/bin/chromium-browser',
-        chromeFlags: ['--timeout=0']
+        chromeFlags: ['--timeout=600000']
     },
     fingerprint: false,
     turnstile: true
