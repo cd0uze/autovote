@@ -11,14 +11,6 @@ const Ext = path.join(process.cwd(), "./0.4.12_0");
 async function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 };
-
-/*const response = await connect({
-    headless: "auto",
-    fingerprint: false,
-    turnstile: true
-}).catch(err => console.log(err));*/
-
-//const {page, browser, setTarget} = response,
 const browser = await puppeteer.launch({
   headless: true,
   args: [
