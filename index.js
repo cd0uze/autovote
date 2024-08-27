@@ -26,8 +26,7 @@ const browser = await puppeteer.launch({
     `--load-extension=${Ext}`,
     '--enable-automation',
   ],
-  targetFilter:
-targetFilter: (target) => target.type() !== 'other' || !!target.url()
+  targetFilter: targetFilter: (target) => target.type() !== 'other' || !!target.url()
 }).catch(err => console.log(err)),
 browser2 = await puppeteer.launch({
   headless: true,
