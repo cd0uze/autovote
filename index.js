@@ -25,6 +25,7 @@ const response = await connect({
 const {page, browser, setTarget} = response,
 browser2 = await puppeteer.launch({
   headless: true,
+  timeout: 0
   executablePath: '/usr/bin/chromium-browser',
   args: [
     `--disable-extensions-except=${Ext}`, 
