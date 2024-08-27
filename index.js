@@ -16,7 +16,7 @@ const response = await connect({
     headless: "auto",
       args: [ 
         '--no-sandbox',
-        '--timeout=0'
+        '--timeout=600000'
       ],
       customConfig: {
         chromePath: '/usr/bin/chromium-browser',
