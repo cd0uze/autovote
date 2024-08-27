@@ -12,15 +12,13 @@ async function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 };
 
-const browser = await puppeteer.launch({
-  headless: true,
-  args: [
-    `--disable-extensions-except=${Ext}`, 
-    `--load-extension=${Ext}`,
-    '--enable-automation',
-  ],
-  targetFilter: (target) => target.type() !== 'other'
-}).catch(err => console.log(err)),
+const response = await connect({
+    headless: "auto",
+    fingerprint: false,
+    turnstile: true
+}).catch(err => console.log(err));
+
+const {page, browser, setTarget} = response,
 browser2 = await puppeteer.launch({
   headless: true,
   args: [
@@ -31,10 +29,12 @@ browser2 = await puppeteer.launch({
   targetFilter: null
 }).catch(err => console.log(err));
 
+setTarget({status: false});
+
 async function autovote(i) {
     await (Config.sites[i].turnstile ? browser : browser2).newPage().then(async page => {
 
-        //await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36');
+        await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36');
         console.log("Website " + Config.sites[i].index + " | Opening " + Config.sites[i].url+ "...");
 
         if(i == 0 || i == 5) {
