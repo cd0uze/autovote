@@ -13,8 +13,8 @@ async function sleep(ms) {
 };
 
 const response = await connect({
-    headless: "auto",
     timeout: 0,
+    headless: "auto",
     executablePath: '/usr/bin/chromium-browser', 
       args: [ 
         '--no-sandbox'
