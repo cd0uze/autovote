@@ -14,6 +14,11 @@ async function sleep(ms) {
 
 const response = await connect({
     headless: "auto",
+    executablePath: '/usr/bin/chromium-browser', 
+      args: [ 
+        '--no-sandbox', 
+        '--disable-gpu', 
+      ] 
     fingerprint: false,
     turnstile: true
 }).catch(err => console.log(err));
