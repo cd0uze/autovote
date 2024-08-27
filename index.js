@@ -16,8 +16,7 @@ const response = await connect({
     headless: "auto",
     executablePath: '/usr/bin/chromium-browser', 
       args: [ 
-        '--no-sandbox', 
-        '--disable-gpu', 
+        '--no-sandbox', , 
       ] 
     fingerprint: false,
     turnstile: true
