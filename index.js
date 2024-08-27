@@ -19,7 +19,15 @@ async function sleep(ms) {
 }).catch(err => console.log(err));*/
 
 //const {page, browser, setTarget} = response,
-const 
+const browser2 = await puppeteer.launch({
+  headless: true,
+  args: [
+    `--disable-extensions-except=${Ext}`, 
+    `--load-extension=${Ext}`,
+    '--enable-automation',
+  ],
+  targetFilter: null
+}).catch(err => console.log(err));
 browser2 = await puppeteer.launch({
   headless: true,
   args: [
