@@ -12,11 +12,11 @@ async function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 };
 
-const response = await connect({
+/*const response = await connect({
     headless: "auto",
     fingerprint: false,
     turnstile: true
-}).catch(err => console.log(err));
+}).catch(err => console.log(err));*/
 
 const {page, browser, setTarget} = response,
 browser2 = await puppeteer.launch({
