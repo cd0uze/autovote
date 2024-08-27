@@ -27,7 +27,7 @@ const browser2 = await puppeteer.launch({
     '--enable-automation',
   ],
   targetFilter: null
-}).catch(err => console.log(err));
+}).catch(err => console.log(err)),
 browser2 = await puppeteer.launch({
   headless: true,
   args: [
