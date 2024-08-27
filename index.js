@@ -14,7 +14,6 @@ async function sleep(ms) {
 
 const response = await connect({
     headless: "auto",
-    executablePath: '/usr/bin/chromium-browser', 
       args: [ 
         '--no-sandbox',
         '--timeout=0'
