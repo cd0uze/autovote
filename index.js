@@ -104,11 +104,13 @@ if(Config.sites[i].cloudflare){
 
             if(Result) {
                 clearInterval(Interval4);
-                console.log(Result)
 
             if(Result.includes("Thanks for voting!")) {
                 console.log("Website " + Config.sites[i].index + " | Vote added !");
                 resolve();
+            } else if(Result.includes("You either waited too long")) {
+                console.log("Website " + Config.sites[i].index + " | Error occured.Voting again...");
+                await check();
             } else {
                 console.log("Website " + Config.sites[i].index + " | Unknown error !");
                 
@@ -170,9 +172,9 @@ await check();
 }).catch(err => console.log("Website " + Config.sites[i].index + " | " + err.message));
 };
 
-/*for (const i in Config.sites) {
+for (const i in Config.sites) {
     await autovote(i);
 };
-*/
 
-autovote(0)
+
+//setInterval(voteloop, 60*60*12*1000)
