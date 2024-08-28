@@ -1,4 +1,4 @@
-import puppeteer from 'puppeteer-extra';
+import puppeteer from 'puppeteer';
 import { connect } from 'puppeteer-real-browser-nopecha';
 import path from 'path';
 import Config from './config.json' assert {type: "json"};
