@@ -34,7 +34,7 @@ async function autovote(i) {
         await page.goto(Config.sites[i].url, {timeout: 0});
     }
 
-    await page.waitFor('*')
+    await page.waitFor('*');
 
     console.log("Website " + Config.sites[i].index + " | Website opened !");
 
