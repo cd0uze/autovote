@@ -14,10 +14,6 @@ async function sleep(ms) {
 
 const response = await connect({
     headless: "auto",
-      args: [ 
-        '--no-sandbox',
-        '--timeout=600000'
-      ],
     fingerprint: false,
     turnstile: true
 }).catch(err => console.log(err));
