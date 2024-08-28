@@ -17,8 +17,7 @@ const response = await connect({
       args: [ 
         '--no-sandbox',
         '--timeout=600000'
-      ]
-    },
+      ],
     fingerprint: false,
     turnstile: true
 }).catch(err => console.log(err));
