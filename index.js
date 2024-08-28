@@ -34,7 +34,7 @@ async function autovote(i) {
         await page.goto(Config.sites[i].url, {timeout: 0});
     }
 
-    await page .waitForNetworkIdle();
+    await page.waitForNetworkIdle();
 
     console.log("Website " + Config.sites[i].index + " | Website opened !");
 
