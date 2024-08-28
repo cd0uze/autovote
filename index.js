@@ -20,8 +20,6 @@ const response = await connect({
 
 const {page, browser, setTarget} = response;
 
-setTarget({status: false});
-
 async function autovote(i) {
     await browser.newPage().then(async page => {
 
