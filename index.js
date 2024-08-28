@@ -17,10 +17,7 @@ const response = await connect({
       args: [ 
         '--no-sandbox',
         '--timeout=600000'
-      ],
-      customConfig: {
-        chromeFlags: ['--timeout=600000', `--disable-extensions-except=${Ext}`, 
-    `--load-extension=${Ext}`]
+      ]
     },
     fingerprint: false,
     turnstile: true
