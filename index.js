@@ -3,8 +3,6 @@ import { connect } from 'puppeteer-real-browser-nopecha';
 import path from 'path';
 import Config from './config.json' assert {type: "json"};
 
-puppeteer.use(StealthPlugin());
-
 const Ext = path.join(process.cwd(), "./0.4.12_0");
 
 async function sleep(ms) {
