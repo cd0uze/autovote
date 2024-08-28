@@ -177,4 +177,4 @@ for (const i in Config.sites) {
 };
 
 
-setInterval(voteloop, 60*60*12*1000)
+//setInterval(voteloop, 60*60*12*1000)
