@@ -14,6 +14,9 @@ async function sleep(ms) {
 
 const response = await connect({
     headless: "auto",
+    customConfig: {
+        executablePath: '/usr/bin/chromium-browser',
+    }
     fingerprint: false,
     turnstile: true
 }).catch(err => console.log(err));
