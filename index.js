@@ -177,6 +177,6 @@ await check();
 };
 */
 
-//autovote(1)
+autovote(2)
 
 //setInterval(voteloop, 60*60*12*1000)
