@@ -113,7 +113,7 @@ if(Config.sites[i].cloudflare){
                 await check();
             } else {
                 console.log("Website " + Config.sites[i].index + " | Unknown error !");
-                resolve();
+                
             }
         }
         }, 5000);
