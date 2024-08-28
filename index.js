@@ -22,18 +22,6 @@ const response = await connect({
 }).catch(err => console.log(err));
 
 const {page, browser, setTarget} = response;
-browser2 = await puppeteer.launch({
-  timeout: 0,
-  headless: true,
-  executablePath: '/usr/bin/chromium-browser',
-  args: [
-    `--disable-extensions-except=${Ext}`, 
-    `--load-extension=${Ext}`,
-    '--enable-automation',
-    '--no-sandbox'
-  ],
-  targetFilter: null
-}).catch(err => console.log(err));
 
 setTarget({status: false});
 
