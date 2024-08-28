@@ -177,6 +177,6 @@ for (const i in Config.sites) {
 };
 
 
-autovote(1)
+//autovote(1)
 
 //setInterval(voteloop, 60*60*12*1000)
