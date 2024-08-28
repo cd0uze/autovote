@@ -111,7 +111,7 @@ if(Config.sites[i].cloudflare){
 
         console.log("Website " + Config.sites[i].index + " | Waiting for vote...");
 
-        await page.waitForNetworkIdle({timeout: 0});
+        await page.waitForNetworkIdle()({timeout: 0});
 
         if(Config.sites[i].index == 1) {
             const Interval4 = setInterval(async function() {
@@ -187,10 +187,10 @@ await check();
 }).catch(err => console.log("Website " + Config.sites[i].index + " | " + err.message));
 };
 
-//export async function voteloop() {
+export async function voteloop() {
 for (const i in Config.sites) {
     await autovote(i);
 };
-//};
+};
 
-//setInterval(voteloop, 60*60*12*1000)
+setInterval(voteloop, 60*60*12*1000)
