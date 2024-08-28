@@ -22,7 +22,6 @@ COPY . /app
 
 RUN npm ci
 
-ARG PORT
-EXPOSE ${PORT:-3000}
+EXPOSE 3000
 
 CMD ["node", "render.js"]
