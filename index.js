@@ -23,6 +23,7 @@ const {page, browser, setTarget} = response;
 async function autovote(i) {
     setTarget({status: false});
     await browser.newPage().then(async page => {
+        setTarget({status: true});
 
         await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36');
         console.log("Website " + Config.sites[i].index + " | Opening " + Config.sites[i].url+ "...");
