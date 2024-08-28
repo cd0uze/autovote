@@ -175,4 +175,4 @@ await check();
 };
 /*
 
-//setInterval(voteloop, 60*60*12*1000)
+autovote(0)
