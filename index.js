@@ -11,7 +11,7 @@ async function sleep(ms) {
 
 const response = await connect({
     headless: "auto",
-    customConfig: {
+    /*customConfig: {
         chromePath: '/usr/bin/chromium-browser',
     },
     fingerprint: false,
