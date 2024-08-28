@@ -4,7 +4,7 @@ const port = 3000
 
 const app = express();
 
-app.get("/autovote", (req, res) => {
+app.get("/", (req, res) => {
   res.send("Autovote is running now !")
   voteloop();
 });
