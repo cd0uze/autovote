@@ -23,7 +23,7 @@ const {page, browser, setTarget} = response;
 setTarget({status: false});
 
 async function autovote(i) {
-    await (Config.sites[i].turnstile ? browser : browser2).newPage().then(async page => {
+    await browser.newPage().then(async page => {
 
         await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36');
         console.log("Website " + Config.sites[i].index + " | Opening " + Config.sites[i].url+ "...");
