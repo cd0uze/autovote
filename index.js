@@ -183,7 +183,7 @@ await check();
 }, 5000);
 }).then(async () => {
     await page.waitForNetworkIdle({timeout: 0});
-    await page.close().catch();
+    await page.close();
 }).catch(err => console.log("Website " + Config.sites[i].index + " | " + err.message));
 }).catch(err => console.log("Website " + Config.sites[i].index + " | " + err.message));
 };
