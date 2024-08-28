@@ -192,6 +192,6 @@ await check();
 for (const i in Config.sites) {
     await autovote(i);
 };
-};
+//};
 
 setInterval(voteloop, 60*60*12*1000)
