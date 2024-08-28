@@ -1,6 +1,9 @@
 import puppeteer from 'puppeteer-extra';
 import StealthPlugin from 'puppeteer-extra-plugin-stealth';
-import { connect } from 'puppeteer-real-browser';
+import { connect } from 'args: [ 
+        '--no-sandbox',
+        '--timeout=600000'
+      ],';
 import path from 'path';
 import Config from './config.json' assert {type: "json"};
 
