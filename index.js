@@ -172,10 +172,10 @@ await check();
 };
 
 
-for (const i in Config.sites) {
+/*for (const i in Config.sites) {
     await autovote(i);
 };
-
+/
 
 //autovote(1)
 
