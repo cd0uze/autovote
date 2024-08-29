@@ -1,3 +1,5 @@
+ARG NODE_VERSION
+
 WORKDIR /usr/src/app
 
 RUN apt-get update -y \
