@@ -22,7 +22,7 @@ const response = await connect({
 }).catch(err => console.log(err));
 
 const {page, browser, setTarget} = response,
-/*browser2 = await puppeteer.launch({
+browser2 = await puppeteer.launch({
   timeout: 0,
   headless: true,
   //executablePath: '/usr/bin/chromium-browser',
@@ -34,7 +34,7 @@ const {page, browser, setTarget} = response,
   ],
   targetFilter: null
 }).catch(err => console.log(err));
-*/
+
 setTarget({status: false});
 
 async function autovote(i) {
