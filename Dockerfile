@@ -1,10 +1,10 @@
 WORKDIR /app
 
-RUN apt-get update && apk add --no-cache nmap && \
-    echo @edge https://dl-cdn.alpinelinux.org/alpine/edge/community >> /etc/apk/repositories && \
-    echo @edge https://dl-cdn.alpinelinux.org/alpine/edge/main >> /etc/apk/repositories && \
-    apk update && \
-    apk add --no-cache \
+RUN apt-get update && apt-get add --no-cache nmap && \
+    echo @edge https://dl-cdn.alpinelinux.org/alpine/edge/community >> /etc/apt-get/repositories && \
+    echo @edge https://dl-cdn.alpinelinux.org/alpine/edge/main >> /etc/apt-get/repositories && \
+    apt-get update && \
+    apt-get add --no-cache \
       chromium \
       harfbuzz \
       "freetype>2.8" \
