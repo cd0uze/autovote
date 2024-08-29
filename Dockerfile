@@ -1,19 +1,11 @@
-ARG NODE_VERSION
+FROM ghcr.io/puppeteer/puppeteer:19.7.2
+
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
+    PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable
 
 WORKDIR /usr/src/app
 
-RUN apt-get update -y \
-  && apt-get -y install \
-    xvfb \
-  && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
-
-ENV PUPPETEER_SKIP_CHROMIMUM_DOWNLOAD=true \
-PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
-
-COPY . /app
-
+COPY package*.json ./
 RUN npm ci
-
-EXPOSE 3000
-
-CMD ["node", "render.js"]
+COPY . .
+CMD [ "node", "index.js" ]
