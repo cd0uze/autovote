@@ -1,6 +1,4 @@
-ARG NODE_VERSION
 
-WORKDIR /usr/src/app
 
 RUN apt-get update -y \
   && apt-get -y install \
