@@ -1,8 +1,6 @@
 WORKDIR /usr/src/app
 
-RUN apt-get update && apt-get install -y --no-cache nmap && \
-    echo @edge https://dl-cdn.alpinelinux.org/alpine/edge/community >> /etc/apt-get/repositories && \
-    echo @edge https://dl-cdn.alpinelinux.org/alpine/edge/main >> /etc/apt-get/repositories && \
+RUN apt-get update && apt-get install -y
     apt-get update && \
     apt-get add --no-cache \
       chromium \
