@@ -14,15 +14,18 @@ async function sleep(ms) {
 
 const response = await connect({
     headless: "auto",
+    customConfig: {
+        chromePath: '/usr/bin/chromium-browser',
+    },
     fingerprint: false,
     turnstile: true
 }).catch(err => console.log(err));
 
-const {page, browser, setTarget} = response;
-/*browser2 = await puppeteer.launch({
+const {page, browser, setTarget} = response,
+browser2 = await puppeteer.launch({
   timeout: 0,
   headless: true,
-  //executablePath: '/usr/bin/chromium-browser',
+  executablePath: '/usr/bin/chromium-browser',
   args: [
     `--disable-extensions-except=${Ext}`, 
     `--load-extension=${Ext}`,
@@ -31,12 +34,11 @@ const {page, browser, setTarget} = response;
   ],
   targetFilter: null
 }).catch(err => console.log(err));
-*/
 
 setTarget({status: false});
 
 async function autovote(i) {
-     browser.newPage().then(async page => {
+    await (Config.sites[i].turnstile ? browser : browser2).newPage().then(async page => {
 
         await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36');
         console.log("Website " + Config.sites[i].index + " | Opening " + Config.sites[i].url+ "...");
@@ -113,7 +115,7 @@ if(Config.sites[i].cloudflare){
 
         if(Config.sites[i].index == 1) {
             const Interval4 = setInterval(async function() {
-            const Result = await page.evaluate(() => document.getElementsByClassName("btn btn-primary btn-lg btn-block")[0]?.textContent).catch() || await page.evaluate(() => document.getElementsByClassName("alert alert-danger")[0]?.textContent).catch();
+            const Result = await page.evaluate(() => document.getElementsByClassName("btn btn-primary btn-lg btn-block")[0]?.textContent).catch() || await page.evaluate(() => document.getElementsByClassName("alert alert-danger")[0]?.textContent).catch()
 
             if(Result) {
                 clearInterval(Interval4);
@@ -185,10 +187,10 @@ await check();
 }).catch(err => console.log("Website " + Config.sites[i].index + " | " + err.message));
 };
 
-//export async function voteloop() {
+export async function voteloop() {
 for (const i in Config.sites) {
     await autovote(i);
 };
-//};
+};
 
-//setInterval(voteloop, 60*60*12*1000)
+setInterval(voteloop, 60*60*12*1000)
