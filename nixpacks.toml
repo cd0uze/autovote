@@ -23,4 +23,4 @@
     ]
 
     [start]
-cmd = "node render.js"
+cmd = "node index.js"
