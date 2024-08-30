@@ -29,7 +29,7 @@ browser2 = await puppeteer.launch({
   args: [
     `--disable-extensions-except=${Ext}`, 
     `--load-extension=${Ext}`,
-    '--enable-automation'
+    '--enable-automation',
     'no-sandbox'
   ],
   targetFilter: null
