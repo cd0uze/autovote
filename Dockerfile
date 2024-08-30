@@ -5,6 +5,8 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
 
 WORKDIR /usr/src/app
 
+run sudo apt-get install xvfb
+
 COPY package*.json ./
 RUN npm ci
 COPY . .
