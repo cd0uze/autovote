@@ -21,3 +21,6 @@
     'xdg-utils',
     "xvfb"
     ]
+
+    [start]
+cmd = "node render.j"
