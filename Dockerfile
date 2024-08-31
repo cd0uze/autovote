@@ -1,5 +1,5 @@
 
 
-WORKDIR cdouze@cdouze:~/autovote
+WORKDIR /home/cdouze/autovote
 
 CMD [ "node", "index.js" ]
