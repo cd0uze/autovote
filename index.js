@@ -2,7 +2,7 @@ import puppeteer from 'puppeteer-extra';
 import StealthPlugin from 'puppeteer-extra-plugin-stealth';
 import { connect } from 'puppeteer-real-browser-nopecha';
 import path from 'path';
-import Config from './config.json' assert {type: "json"};
+import Config from './config.json' with {type: "json"};
 
 puppeteer.use(StealthPlugin());
 
@@ -39,7 +39,7 @@ setTarget({status: false});
 
 async function autovote(i) {
     await (Config.sites[i].turnstile ? browser : browser2).newPage().then(async page => {
-        
+
         console.log("Website " + Config.sites[i].index + " | Opening " + Config.sites[i].url+ "...");
 
         if(i == 0 || i == 5) {
