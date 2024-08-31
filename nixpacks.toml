@@ -19,7 +19,7 @@
     'libxss1',
     'libxtst6',
     'xdg-utils',
-    "xvfb"
+    'xvfb'
     ]
 
     [start]
