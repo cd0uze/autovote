@@ -13,7 +13,7 @@ async function sleep(ms) {
 };
 
 const response = await connect({
-    headless: false,
+    headless: "auto",
     customConfig: {
         //chromePath: '/usr/bin/chromium-browser',
     },
