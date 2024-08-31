@@ -2,7 +2,7 @@ import puppeteer from 'puppeteer-extra';
 import StealthPlugin from 'puppeteer-extra-plugin-stealth';
 import { connect } from 'puppeteer-real-browser-nopecha';
 import path from 'path';
-import Config from './config.json' assert {type: "json"};
+import Config from './config.json' with {type: "json"};
 
 puppeteer.use(StealthPlugin());
 
@@ -13,7 +13,7 @@ async function sleep(ms) {
 };
 
 const response = await connect({
-    headless: "auto",
+    headless: "new",
     customConfig: {
         //chromePath: '/usr/bin/chromium-browser',
     },
