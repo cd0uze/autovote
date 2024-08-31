@@ -186,14 +186,14 @@ await check();
 }).catch(err => console.log("Website " + Config.sites[i].index + " | " + err.message));
 };
 
-/*
-export async function voteloop() {
+
+//export async function voteloop() {
 for (const i in Config.sites) {
     await autovote(i);
 };
-};
-*/
+//};
 
-autovote(0)
+
+//autovote(0)
 
 //setInterval(voteloop, 60*60*12*1000)
