@@ -41,7 +41,7 @@ async function autovote(i) {
         await page.goto(Config.sites[i].url, {waitUntil: "networkidle0", timeout: 0});
 
         if([1, 6].includes(Config.sites[i].index)) {
-            page.waitForFunction('page.evaluate(() => document.title.includes("Vote"))', {timeout: 0});
+            await page.waitForFunction('page.evaluate(() => document.title.includes("Vote"))', {timeout: 0});
             await page.waitForNavigation({waitUntil: "networkidle0", timeout: 0});
         }
 
