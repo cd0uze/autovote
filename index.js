@@ -44,7 +44,6 @@ async function autovote(i) {
 
         if([1, 6].includes(Config.sites[i].index)) {
             await page.waitForFunction('document.title.includes("Vote")', {timeout: 0});
-            console.log("oui2")
         }
 
         console.log(clc.green("Website " + Config.sites[i].index + " | Website opened !"));
