@@ -46,7 +46,7 @@ async function autovote(i) {
             await page.waitForNavigation({waitUntil: "networkidle0", timeout: 0});
             console.log("oui")
             await page.waitForFunction('(await page.title.includes("Vote"))', {timeout: 0});
-            console.log("oui")
+            console.log("oui2")
             await page.waitForNavigation({waitUntil: "networkidle0", timeout: 0});
         }
 
