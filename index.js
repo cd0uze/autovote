@@ -157,7 +157,6 @@ async function autovote(i) {
                             if(Config.sites[i].voteCooldown) await sleep((Config.sites[i].voteCooldown+5)*1000);            
 
                             const Url = await page.url();
-                            console.log("Website " + Config.sites[i].index + " | " + Url);
 
                             if(Url === Config.sites[i].voteUrl || Config.sites[i].voteUrl.includes(Url)) {
                                 console.log("Website " + Config.sites[i].index + " | Vote added !");
