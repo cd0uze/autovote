@@ -14,7 +14,7 @@ async function sleep(ms) {
 };
 
 function color(type, message) {
-    console.log(clc.red(message))
+    console.log(clc[type](message))
 }
 
 const response = await connect({
