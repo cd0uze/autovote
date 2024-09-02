@@ -159,7 +159,7 @@ async function autovote(i) {
                             const Url = await page.url();
 
                             if(Url === Config.sites[i].voteUrl || Config.sites[i].voteUrl.includes(Url)) {
-                                console.log("Website " + Config.sites[i].index + " | Vote added !");
+                                resolve(clc.green("Website " + Config.sites[i].index + " | Vote added !"));
                                 resolve();
                             } else {
                                 console.log("Website " + Config.sites[i].index + " | Unknown error !");
