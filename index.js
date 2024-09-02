@@ -116,8 +116,7 @@ async function autovote(i) {
                                     clearInterval(Interval4);
 
                                     if(Result.includes("Thanks for voting!")) {
-                                        console.log(clc.green("Website " + Config.sites[i].index + " | Vote added !"));
-                                        resolve();
+                                        resolve(clc.green("Website " + Config.sites[i].index + " | Vote added !"));
                                     } else if(Result.includes("You either waited too long")) {
                                         console.log(clc.error("Website " + Config.sites[i].index + " | Error occured.Voting again..."));
                                         await check();
