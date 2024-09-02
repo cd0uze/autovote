@@ -123,8 +123,7 @@ async function autovote(i) {
                                         console.log(clc.red("Website " + Config.sites[i].index + " | Error occured.Voting again..."));
                                         await check();
                                     } else {
-                                        reject();
-                                        
+                                        reject();                                      
                                     }
                                 }
                             }, 5000);
