@@ -63,7 +63,7 @@ async function autovote(i) {
 
         if(Config.sites[i].cloudflare){
             await page.waitForSelector(".cf-turnstile", {timeout: 0});
-            console.log("Website " + Config.sites[i].index + " | Solving Captcha...");
+            console.log(clc.yellow("Website " + Config.sites[i].index + " | Solving Captcha..."));
 
             const Interval = setInterval(async function() {
                 const captchaValue = await page.evaluate(() => document.getElementsByClassName("cf-turnstile")[0]?.children[0]?.querySelector("input[name=cf-turnstile-response]")?.value);
