@@ -13,7 +13,7 @@ async function sleep(ms) {
 };
 
 const response = await connect({
-    headless: "shell",
+    headless: "auto",
     customConfig: {
         //chromePath: '/usr/bin/chromium-browser',
     },
@@ -24,7 +24,7 @@ const response = await connect({
 const {page, browser, setTarget} = response,
 browser2 = await puppeteer.launch({
   timeout: 0,
-  headless: "shell",
+  headless: "false",
   //executablePath: '/usr/bin/chromium-browser',
   args: [
     `--disable-extensions-except=${Ext}`, 
