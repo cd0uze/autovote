@@ -134,7 +134,7 @@ async function autovote(i) {
                             if(Result.includes("Thank you for voting!")) {
                                 resolve(clc.green("Website " + Config.sites[i].index + " | Vote added !");                           
                             } else {
-                                "Website " + Config.sites[i].index + " | Unknown error !");
+                                reject("Website " + Config.sites[i].index + " | Unknown error !");
                                 reject();
                             }
                         }
