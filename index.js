@@ -118,7 +118,7 @@ async function autovote(i) {
                                     if(Result.includes("Thanks for voting!")) {
                                         resolve(clc.green("Website " + Config.sites[i].index + " | Vote added !"));
                                     } else if(Result.includes("You either waited too long")) {
-                                        console.log(clc.error("Website " + Config.sites[i].index + " | Error occured.Voting again..."));
+                                        console.log(clc.red("Website " + Config.sites[i].index + " | Error occured.Voting again..."));
                                         await check();
                                     } else {
                                         reject("Website " + Config.sites[i].index + " | Unknown error !");
