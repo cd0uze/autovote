@@ -170,7 +170,7 @@ async function autovote(i) {
             }, 5000);
 }).then(async () => {
     await page.close();
-}).catch(err => console.log("Website " + Config.sites[i].index + " | " + err.message));
+}).catch(err => console.log(clc.red("Website " + Config.sites[i].index + " | " + err.message));
 }).catch(err => console.log("Website " + Config.sites[i].index + " | " + err.message));
 };
 
