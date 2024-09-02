@@ -98,7 +98,7 @@ async function autovote(i) {
 
         return new Promise(async (resolve, reject) => {
             const Interval3 = setInterval(async function() {
-                async function check(){
+                async function check() {
                     if(Checked) {
                         clearInterval(Interval3);
 
