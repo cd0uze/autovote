@@ -42,7 +42,7 @@ async function autovote(i) {
 
         console.log([1, 6].includes(Config.sites[i].index))
 
-        if([1, 6].includes(Config.sites[i].index)){
+        if([1, 6].includes(Config.sites[i].index)) {
             await page.waitForFunction('document.title.includes("Vote")', {timeout: 0});
         }
 
@@ -55,21 +55,21 @@ async function autovote(i) {
 
         await page.evaluate((e) => e.scrollIntoView(), (await page.$(`input[name=${Config.sites[i].input}`)));
 
-        if(Config.sites[i].button){
+        if(Config.sites[i].button) {
             await page.waitForSelector(`input[name=${Config.sites[i].button}]`, {timeout: 0});
             await page.$eval(`input[name=${Config.sites[i].button}]`, b => b.click());
         }
 
         let Checked = Config.sites[i].captcha || Config.sites[i].cloudflare ? false : true;
 
-        if(Config.sites[i].cloudflare){
+        if(Config.sites[i].cloudflare) {
             await page.waitForSelector(".cf-turnstile", {timeout: 0});
             console.log(clc.yellow("Website " + Config.sites[i].index + " | Solving Captcha..."));
 
             const Interval = setInterval(async function() {
                 const captchaValue = await page.evaluate(() => document.getElementsByClassName("cf-turnstile")[0]?.children[0]?.querySelector("input[name=cf-turnstile-response]")?.value);
 
-                if(captchaValue){
+                if(captchaValue) {
                     clearInterval(Interval);
 
                     console.log(clc.green("Website " + Config.sites[i].index + " | Captcha solved !"));
@@ -77,7 +77,7 @@ async function autovote(i) {
                 }
             }, 5000);
         }
-        if(Config.sites[i].captcha){
+        if(Config.sites[i].captcha) {
             console.log(clc.yellow("Website " + Config.sites[i].index + " | Solving Captcha..."));
 
             const Interval2 = setInterval(async function() {
