@@ -191,12 +191,12 @@ await check();
 
 
 //export async function voteloop() {
-for (const i in Config.sites) {
+/*for (const i in Config.sites) {
     await autovote(i);
 };
-
+*/
 //};
 
-//autovote(1)
+autovote(6)
 
 //setInterval(voteloop, 60*60*12*1000)
