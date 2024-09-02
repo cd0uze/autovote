@@ -97,7 +97,7 @@ async function autovote(i) {
         await page.focus(`input[name=${Config.sites[i].input}]`);
         await page.keyboard.type(Config.username);
 
-        return new Promise(async resolve => {
+        return new Promise(async (resolve, reject) => {
             const Interval3 = setInterval(async function() {
                 async function check(){
                     if(Checked) {
@@ -123,7 +123,7 @@ async function autovote(i) {
                                         console.log(clc.red("Website " + Config.sites[i].index + " | Error occured.Voting again..."));
                                         await check();
                                     } else {
-                                        resolve(clc.red("Website " + Config.sites[i].index + " | Unknown error !"));
+                                        reject(clc.red("Website " + Config.sites[i].index + " | Unknown error !"));
                                         
                                     }
                                 }
@@ -136,7 +136,7 @@ async function autovote(i) {
                             if(Result.includes("Thank you for voting!")) {
                                 resolve(clc.green("Website " + Config.sites[i].index + " | Vote added !"));                           
                             } else {
-                                resolve(clc.red("Website " + Config.sites[i].index + " | Unknown error !"));
+                                reject(clc.red("Website " + Config.sites[i].index + " | Unknown error !"));
                             }
                         }
 
@@ -151,7 +151,7 @@ async function autovote(i) {
                                 console.log(clc.red("Website " + Config.sites[i].index + " | Error occured.Voting again..."));
                                 await check();
                             } else {
-                                resolve(clc.red("Website " + Config.sites[i].index + " | Unknown error !"));
+                                reject(clc.red("Website " + Config.sites[i].index + " | Unknown error !"));
                             }
                         }
 
@@ -163,7 +163,7 @@ async function autovote(i) {
                             if(Url === Config.sites[i].voteUrl || Config.sites[i].voteUrl.includes(Url)) {
                                 resolve(clc.green("Website " + Config.sites[i].index + " | Vote added !"));
                             } else {
-                                resolve(clc.red("Website " + Config.sites[i].index + " | Unknown error !"));
+                                reject(clc.red("Website " + Config.sites[i].index + " | Unknown error !"));
                             }
                         }
                     }
