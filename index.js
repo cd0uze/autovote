@@ -77,7 +77,7 @@ async function autovote(i) {
             }, 5000);
         }
         if(Config.sites[i].captcha){
-            console.log(clc.yellow("Website " + Config.sites[i].index + " | Solving Captcha...");
+            console.log(clc.yellow("Website " + Config.sites[i].index + " | Solving Captcha..."));
 
             const Interval2 = setInterval(async function() {
                 const Frame = await page.frames().find(f => f.name().startsWith("a-"));
