@@ -132,8 +132,7 @@ async function autovote(i) {
                             const Result = await page.evaluate(() => document.getElementsByClassName("modal-body text-center")[0]?.textContent);
 
                             if(Result.includes("Thank you for voting!")) {
-                                resolve(clc.green("Website " + Config.sites[i].index + " | Vote added !");
-                            
+                                resolve(clc.green("Website " + Config.sites[i].index + " | Vote added !");                           
                             } else {
                                 console.log("Website " + Config.sites[i].index + " | Unknown error !");
                                 reject();
