@@ -35,7 +35,7 @@
 		"url": "https://minecraftservers.page/servers/jartexnetwork/vote",
 		"voteUrl": "https://minecraftservers.page/servers?vote=1",
 		"voteConfirm": true,
-		"voteCooldown": 15,
+		"voteCooldown": 10,
 		"input": "minecraft_name",
 		"captcha": true
 	},
