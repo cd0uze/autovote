@@ -194,7 +194,6 @@ await check();
 */
 //};
 
-
 //autovote(1)
 
 //setInterval(voteloop, 60*60*12*1000)
