@@ -169,14 +169,6 @@ async function autovote(i) {
 }).catch(err => console.log(clc.red("Website " + Config.sites[i].index + " | " + err.message)));
 };
 
-
-//export async function voteloop() {
-/*for (const i in Config.sites) {
+for (const i in Config.sites) {
     await autovote(i);
 };
-*/
-//};
-
-autovote(6)
-
-//setInterval(voteloop, 60*60*12*1000)
