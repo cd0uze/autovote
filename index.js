@@ -47,7 +47,6 @@ async function autovote(i) {
             console.log("oui")
             await page.waitForFunction('(await page.title.includes("Vote"))', {timeout: 0});
             console.log("oui2")
-            await page.waitForNavigation({waitUntil: "networkidle0", timeout: 0});
         }
 
         console.log(clc.green("Website " + Config.sites[i].index + " | Website opened !"));
