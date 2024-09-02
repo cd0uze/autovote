@@ -161,7 +161,7 @@ async function autovote(i) {
                             if(Url === Config.sites[i].voteUrl || Config.sites[i].voteUrl.includes(Url)) {
                                 resolve(clc.green("Website " + Config.sites[i].index + " | Vote added !"));
                             } else {
-                                console.log("Website " + Config.sites[i].index + " | Unknown error !");
+                                console.lo"Website " + Config.sites[i].index + " | Unknown error !");
                                 reject()
                             }
                         }
