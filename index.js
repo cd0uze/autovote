@@ -119,7 +119,7 @@ async function autovote(i) {
                                         console.log(clc.green("Website " + Config.sites[i].index + " | Vote added !"));
                                         resolve();
                                     } else if(Result.includes("You either waited too long")) {
-                                        console.log("Website " + Config.sites[i].index + " | Error occured.Voting again...");
+                                        console.log(clc.error("Website " + Config.sites[i].index + " | Error occured.Voting again..."));
                                         await check();
                                     } else {
                                         console.log("Website " + Config.sites[i].index + " | Unknown error !");
