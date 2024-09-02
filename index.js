@@ -122,7 +122,7 @@ async function autovote(i) {
                                         await check();
                                     } else {
                                         reject("Website " + Config.sites[i].index + " | Unknown error !");
-                                        reject();
+                                        
                                     }
                                 }
                             }, 5000);
