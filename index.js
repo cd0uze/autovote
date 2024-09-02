@@ -12,6 +12,8 @@ async function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 };
 
+function color(
+
 const response = await connect({
     headless: "auto",
     customConfig: {
