@@ -172,6 +172,7 @@ async function autovote(i) {
             }, 5000);
 }).then(async () => {
     await page.close();
+    console.log(clc.green("Website " + Config.sites[i].index + " | Vote added !"));
 }).catch(async () => {
     await page.close();
     console.log(clc.red("Website " + Config.sites[i].index + " | Unknown error !"));
