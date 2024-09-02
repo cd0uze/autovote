@@ -71,7 +71,7 @@ async function autovote(i) {
                 if(captchaValue){
                     clearInterval(Interval);
 
-                    console.log("Website " + Config.sites[i].index + " | Captcha solved !");
+                    console.log(clc.green("Website " + Config.sites[i].index + " | Captcha solved !"));
                     Checked = true;
                 }
             }, 5000);
