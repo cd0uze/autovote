@@ -121,7 +121,7 @@ async function autovote(i) {
                                         console.log(clc.error("Website " + Config.sites[i].index + " | Error occured.Voting again..."));
                                         await check();
                                     } else {
-                                        console.log("Website " + Config.sites[i].index + " | Unknown error !");
+                                        reject("Website " + Config.sites[i].index + " | Unknown error !");
                                         reject();
                                     }
                                 }
