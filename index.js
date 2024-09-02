@@ -36,7 +36,7 @@ setTarget({status: false});
 async function autovote(i) {
     await (Config.sites[i].turnstile ? browser : browser2).newPage().then(async page => {
 
-        console.log(clc.yellow("Website " + Config.sites[i].index + " | Opening " + Config.sites[i].url+ "..."));
+        console.log(clc.yellow("Website " + Config.sites[i].index + " | Opening " + Config.sites[i].url + "..."));
 
         await page.goto(Config.sites[i].url, {waitUntil: "networkidle0", timeout: 0});
 
