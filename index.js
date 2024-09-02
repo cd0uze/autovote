@@ -133,7 +133,7 @@ async function autovote(i) {
 
                             if(Result.includes("Thank you for voting!")) {
                                 resolve(clc.green("Website " + Config.sites[i].index + " | Vote added !");
-                                resolve();
+                            
                             } else {
                                 console.log("Website " + Config.sites[i].index + " | Unknown error !");
                                 reject();
