@@ -153,7 +153,7 @@ async function autovote(i) {
                             }
                         }
 
-                        if(Config.sites[i].voteConfirm){
+                        if(Config.sites[i].voteConfirm) {
                             if(Config.sites[i].voteCooldown) await sleep((Config.sites[i].voteCooldown+5)*1000);            
 
                             const Url = await page.url();
