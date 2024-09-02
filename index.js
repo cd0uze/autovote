@@ -55,7 +55,7 @@ async function autovote(i) {
 
         await page.evaluate((e) => e.scrollIntoView(), (await page.$(`input[name=${Config.sites[i].input}`)));
 
-        if(Config.sites[i].button) {
+        if(Config.sites[i].button){
             await page.waitForSelector(`input[name=${Config.sites[i].button}]`, {timeout: 0});
             await page.$eval(`input[name=${Config.sites[i].button}]`, b => b.click());
         }
