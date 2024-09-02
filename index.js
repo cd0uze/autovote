@@ -97,7 +97,7 @@ async function autovote(i) {
         await page.focus(`input[name=${Config.sites[i].input}]`);
         await page.keyboard.type(Config.username);
 
-        return new Promise(async (resolve, reject) => {
+        return new Promise(async resolve => {
             const Interval3 = setInterval(async function() {
                 async function check(){
                     if(Checked) {
@@ -123,7 +123,7 @@ async function autovote(i) {
                                         console.log(clc.red("Website " + Config.sites[i].index + " | Error occured.Voting again..."));
                                         await check();
                                     } else {
-                                        reject(clc.red("Website " + Config.sites[i].index + " | Unknown error !"));
+                                        resolve(clc.red("Website " + Config.sites[i].index + " | Unknown error !"));
                                         
                                     }
                                 }
@@ -136,7 +136,7 @@ async function autovote(i) {
                             if(Result.includes("Thank you for voting!")) {
                                 resolve(clc.green("Website " + Config.sites[i].index + " | Vote added !"));                           
                             } else {
-                                reject(clc.red("Website " + Config.sites[i].index + " | Unknown error !"));
+                                resolve(clc.red("Website " + Config.sites[i].index + " | Unknown error !"));
                             }
                         }
 
@@ -151,7 +151,7 @@ async function autovote(i) {
                                 console.log(clc.red("Website " + Config.sites[i].index + " | Error occured.Voting again..."));
                                 await check();
                             } else {
-                                reject(clc.red("Website " + Config.sites[i].index + " | Unknown error !"));
+                                resolve(clc.red("Website " + Config.sites[i].index + " | Unknown error !"));
                             }
                         }
 
