@@ -2,6 +2,7 @@ import puppeteer from 'puppeteer-extra';
 import StealthPlugin from 'puppeteer-extra-plugin-stealth';
 import { connect } from 'puppeteer-real-browser-nopecha';
 import path from 'path';
+import clc from 'cli-color';
 import Config from './config.json' with {type: "json"};
 
 puppeteer.use(StealthPlugin());
