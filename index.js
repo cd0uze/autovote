@@ -103,7 +103,7 @@ if(Config.sites[i].cloudflare){
     await page.focus(`input[name=${Config.sites[i].input}]`);
     await page.keyboard.type(Config.username);
 
-    return new Promise(async resolve => {
+    return new Promise(async (resolve, reject) => {
     const Interval3 = setInterval(async function() {
     async function check(){
     if(Checked) {
