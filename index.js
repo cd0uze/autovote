@@ -162,7 +162,7 @@ if(Config.sites[i].cloudflare){
                     console.log("Website " + Config.sites[i].index + " | Error occured.Voting again...");
                     await check();
                     } else {
-                        reject(color("red", "Website " + Config.sites[i].index + " | Unknown error !"));
+                        reject(clc.red("Website " + Config.sites[i].index + " | Unknown error !"));
                     }
                 }
 
