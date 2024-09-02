@@ -135,7 +135,6 @@ async function autovote(i) {
                                 resolve(clc.green("Website " + Config.sites[i].index + " | Vote added !");                           
                             } else {
                                 reject(clc.red("Website " + Config.sites[i].index + " | Unknown error !");
-                                reject();
                             }
                         }
 
