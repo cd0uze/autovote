@@ -13,7 +13,7 @@ async function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 };
 
-function color(type, message) {
+function color(type, msg) {
     console.log(clc[type](message))
 }
 
