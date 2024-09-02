@@ -43,7 +43,7 @@ async function autovote(i) {
         console.log([1, 6].includes(Config.sites[i].index))
 
         if([1, 6].includes(Config.sites[i].index)) {
-            await page.waitForFunction('(await page.title.includes("Vote"))', {timeout: 0});
+            await page.waitForFunction('document.title.includes("Vote"))', {timeout: 0});
             console.log("oui2")
         }
 
