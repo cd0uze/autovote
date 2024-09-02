@@ -7,7 +7,7 @@ import Config from './config.json' with {type: "json"};
 
 puppeteer.use(StealthPlugin());
 
-const Ext = path.join(process.cwd(), "./0.4.12_0");
+const Ext = path.join(process.cwd(), "./nopecha");
 
 async function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
