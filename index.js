@@ -86,7 +86,7 @@ async function autovote(i) {
                     clearInterval(Interval2);
 
                     await Frame.waitForSelector("span[aria-checked=true]", {timeout:0});
-                    console.log("Website " + Config.sites[i].index + " | Captcha solved !");
+                    console.log(clc.green("Website " + Config.sites[i].index + " | Captcha solved !"));
                     Checked = true;
                 }
             }, 5000);
