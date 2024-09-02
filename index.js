@@ -43,11 +43,7 @@ async function autovote(i) {
 
         console.log(clc.yellow("Website " + Config.sites[i].index + " | Opening " + Config.sites[i].url+ "..."));
 
-        if(i == 0 || i == 5) {
         await page.goto(Config.sites[i].url, {waitUntil: "networkidle0", timeout: 0});
-    } else {
-        await page.goto(Config.sites[i].url, {waitUntil: "networkidle0", timeout: 0});
-    }
 
     console.log("Website " + Config.sites[i].index + " | Website opened !");
 
