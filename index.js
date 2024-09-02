@@ -104,7 +104,7 @@ async function autovote(i) {
                         await page.focus(`input[name=${Config.sites[i].input}]`);
                         await page.keyboard.press("Enter");
 
-                        console.log("Website " + Config.sites[i].index + " | Waiting for vote...");
+                        console.log(clc.yellow("Website " + Config.sites[i].index + " | Waiting for vote..."));
 
                         if(![1, 2, 7].includes(Config.sites[i].index)) await page.waitForNavigation({timeout: 0});
 
