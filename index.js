@@ -144,10 +144,9 @@ async function autovote(i) {
                             const Result = await page.evaluate(() => document.getElementById("voteerror")?.textContent);
 
                             if(Result === "Thanks, Vote Registered") {
-                                resolve(clc.green("Website " + Config.sites[i].index + " | Vote added !");
-                                resolve()
+                                resolve(clc.green("Website " + Config.sites[i].index + " | Vote added !"));
                             } else if(Result === "We cannot verify your vote due to a low browser score. Try another browser or try login to Google to raise your score." || Result === "The verification expired due to timeout.Simply click the Vote button again and it should work."){
-                                console.log("Website " + Config.sites[i].index + " | Error occured.Voting again...");
+                                console.log(c"Website " + Config.sites[i].index + " | Error occured.Voting again...");
                                 await check();
                             } else {
                                 reject(clc.red("Website " + Config.sites[i].index + " | Unknown error !"));
