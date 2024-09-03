@@ -44,7 +44,9 @@ async function autovote(i) {
             await page.waitForFunction('document.title.includes("Vote")', {timeout: 0});
 
             await page.waitForSelector(".fc-button.fc-cta-consent.fc-primary-button", {timeout: 60*1000}).catch();
-            
+
+            const cookiesElement = await page.$(".fc-button.fc-cta-consent.fc-primary-button").catch
+
         }
 
         console.log(clc.green("Website " + Config.sites[i].index + " | Website opened !"));
