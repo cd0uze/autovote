@@ -188,6 +188,3 @@ setInterval(async function() {
     await autovote(i);
 }
 }, 60*60*12*1000);
-
-
-autovote(0);
