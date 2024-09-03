@@ -45,7 +45,7 @@ async function autovote(i) {
 
             await page.waitForSelector(".fc-button.fc-cta-consent.fc-primary-button", {timeout: 60*1000}).catch();
 
-            const cookiesElement = await page.$(".fc-button.fc-cta-consent.fc-primary-button").catch
+            const cookiesElement = await page.$(".fc-button.fc-cta-consent.fc-primary-button");
 
         }
 
