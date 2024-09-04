@@ -187,8 +187,5 @@ await browser2.close();
 };
 
 /*setInterval(async function() {
-    for (const i in Config.sites) {
-    await autovote(i);
-}
 }, 60*60*12*1000);
 */
