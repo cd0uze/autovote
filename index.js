@@ -184,5 +184,5 @@ for (const i in Config.sites) {
     await autovote(i).then(async () => {
     await browser.close();
     await browser2.close();
-    })
+    }).catch();
 }
