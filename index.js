@@ -183,6 +183,9 @@ await browser2.close();
 }, 60*60*12*1000);
 */
 
-for (const i in Config.sites) {
+/*for (const i in Config.sites) {
     await autovote(i);
 }
+*/
+
+autovote(0)
