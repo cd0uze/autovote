@@ -191,4 +191,4 @@ await browser2.close();
     await autovote(i);
 }
 }, 60*60*12*1000);
-ù
+*/
