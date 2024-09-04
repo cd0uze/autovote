@@ -184,4 +184,4 @@ for (const i in Config.sites) {
 
 await browser.close();
 await browser2.close();
-}, 60*10*1000);
+}, 60*60*1000);
