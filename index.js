@@ -186,8 +186,9 @@ await browser2.close();
 }).catch(err => console.log(clc.red("Website " + Config.sites[i].index + " | " + err.message)));
 };
 
-setInterval(async function() {
+/*setInterval(async function() {
     for (const i in Config.sites) {
     await autovote(i);
 }
 }, 60*60*12*1000);
+ù
