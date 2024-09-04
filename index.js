@@ -13,6 +13,7 @@ async function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 };
 
+setInterval(async function() {
 const response = await connect({
     headless: "auto",
     fingerprint: false,
