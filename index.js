@@ -189,3 +189,7 @@ await browser2.close();
 /*setInterval(async function() {
 }, 60*60*12*1000);
 */
+
+for (const i in Config.sites) {
+    await autovote(i);
+}
