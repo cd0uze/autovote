@@ -174,6 +174,9 @@ async function autovote(i) {
     await page.close();
 });
 }).catch(err => console.log(clc.red("Website " + Config.sites[i].index + " | " + err.message)));
+
+await browser.close();
+await browser2.close();
 };
 
 /*setInterval(async function() {
