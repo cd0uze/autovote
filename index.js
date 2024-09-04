@@ -184,4 +184,4 @@ await browser2.close();
 
 for (const i in Config.sites) {
     await autovote(i);
-};
+}
