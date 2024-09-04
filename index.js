@@ -42,13 +42,6 @@ async function autovote(i) {
 
         if([1, 6].includes(Config.sites[i].index)) {
             await page.waitForFunction('document.title.includes("Vote")', {timeout: 0});
-
-            if(Config.sites[i].index == 6) {
-            await page.waitForSelector(".fc-button.fc-cta-consent.fc-primary-button", {timeout: 60*1000}).catch();
-
-            const Consent = await page.$(".fc-button.fc-cta-consent.fc-primary-button");
-            if (Consent) await Consent.click();
-        }
     }
 
         console.log(clc.green("Website " + Config.sites[i].index + " | Website opened !"));
