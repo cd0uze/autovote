@@ -61,7 +61,7 @@ async function autovote(i) {
         let Checked = Config.sites[i].captcha || Config.sites[i].cloudflare ? false : true;
 
         if(Config.sites[i].cloudflare) {
-            await page.waitForSelector(".cf-turnstile", {timeout: 0});
+            await page.waitForSelector(".cf-turnstile", {timeout: 0}).catch(err => console.log(clc.red("Website " + Config.sites[i].index + " | " + err.message)));
             console.log(clc.yellow("Website " + Config.sites[i].index + " | Solving Captcha..."));
 
             const Interval = setInterval(async function() {
