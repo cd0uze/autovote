@@ -16,6 +16,9 @@ async function sleep(ms) {
 const response = await connect({
     headless: "auto",
     fingerprint: false,
+    args : [
+        '--disable-search-engine-choice-screen'
+        ]
     turnstile: true
 }).catch(err => console.log(err));
 
