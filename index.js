@@ -109,7 +109,7 @@ async function autovote(i) {
 
                         if(Config.sites[i].index == 1) {
                             const Interval4 = setInterval(async function() {
-                                const Result = await page.evaluate(() => document.getElementsByClassName("btn btn-primary btn-lg btn-block")[0]?.textContent).catch() || await page.evaluate(() => document.getElementsByClassName("alert alert-danger")[0]?.textContent).catch();
+                                const Result = await page.evaluate(() => document.getElementsByClassName("btn btn-primary btn-lg btn-block")[0]?.textContent) || await page.evaluate(() => document.getElementsByClassName("alert alert-danger")[0]?.textContent).catch();
 
                                 if(Result) {
                                     clearInterval(Interval4);
