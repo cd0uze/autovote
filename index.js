@@ -181,5 +181,3 @@ for (const i in Config.sites) {
     await autovote(i);
 }
 
-await browser.close();
-await browser2.close();
