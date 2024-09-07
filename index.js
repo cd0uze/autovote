@@ -129,7 +129,7 @@ async function autovote(i) {
                         if(Config.sites[i].index == 4) {
                             const Result = await page.evaluate(() => document.getElementsByClassName("modal-body text-center")[0]?.textContent);
 
-                            if(Result.includes("Thank you for voting!")) {
+                            if(Result && Result.includes("Thank you for voting!")) {
                                 resolve();                           
                             } else {
                                 reject();
