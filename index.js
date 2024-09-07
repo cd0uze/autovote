@@ -84,7 +84,7 @@ async function autovote(i) {
                 if(Frame) {
                     clearInterval(Interval2);
 
-                    await Frame.waitForSelector("span[aria-checked=true]", {timeout:0}).catch(err => console.log(clc.red("Website " + Config.sites[i].index + " | " + err.message)));;
+                    await Frame.waitForSelector("span[aria-checked=true]", {timeout:0}).catch(err => console.log(clc.red("Website " + Config.sites[i].index + " | " + err.message)));
                     console.log(clc.green("Website " + Config.sites[i].index + " | Captcha solved !"));
                     Checked = true;
                 }
