@@ -18,7 +18,7 @@ const response = await connect({
     fingerprint: false,
     args : [
         '--disable-search-engine-choice-screen'
-        ]
+        ],
     turnstile: true
 }).catch(err => console.log(err));
 
