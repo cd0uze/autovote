@@ -173,11 +173,16 @@ async function autovote(i) {
     console.log(clc.red("Website " + Config.sites[i].index + " | Failed to add vote !"));
     await page.close();
 });
+
+await browser.close();
+await browser2.close();
 }).catch(err => console.log(clc.red("Website " + Config.sites[i].index + " | " + err.message)));
 };
 
+/*setInterval(async function() {
+}, 60*60*12*1000);
+*/
 
 for (const i in Config.sites) {
     await autovote(i);
 }
-
