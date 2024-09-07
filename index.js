@@ -171,7 +171,7 @@ async function autovote(i) {
     await page.close().catch(err => console.log(clc.red("Website " + Config.sites[i].index + " | " + err.message)));
 }).catch(async () => {
     console.log(clc.red("Website " + Config.sites[i].index + " | Failed to add vote !"));
-    await page.close();
+    await page.close().catch(err => console.log(clc.red("Website " + Config.sites[i].index + " | " + err.message)));
 });
 
 await browser.close();
