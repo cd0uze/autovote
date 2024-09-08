@@ -22,7 +22,7 @@ const response = await connect({
     turnstile: true
 }).catch(err => console.log(err));
 
-const {page, browser,} = response,
+const {page, browser, setTarget} = response,
 browser2 = await puppeteer.launch({
   timeout: 0,
   headless: true,
