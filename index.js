@@ -39,7 +39,7 @@ async function autovote(i) {
 
         console.log(clc.yellow("Website " + Config.sites[i].index + " | Opening " + Config.sites[i].url + "..."));
 
-        await page.goto(Config.sites[i].url, {waitUntil: "networkidle0", timeout: 0});
+        await page.goto(Config.sites[i].url, {waitUntil: "networkidle2", timeout: 0});
 
         /*if([1, 6].includes(Config.sites[i].index)) {
             await page.waitForFunction('document.title.includes("Vote")', {timeout: 0});
