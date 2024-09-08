@@ -5,7 +5,7 @@ import path from 'path';
 import clc from 'cli-color';
 import Config from './config.json' assert {type: "json"};
 
-puppeteer.use(StealthPlugin());
+//puppeteer.use(StealthPlugin());
 
 const Ext = path.join(process.cwd(), "./nopecha");
 
