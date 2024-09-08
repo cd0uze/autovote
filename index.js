@@ -189,3 +189,4 @@ for (const i in Config.sites) {
 }
 
 await browser.close().catch(err => console.log(clc.red(err.message)));
+await browser.close().catch(err => console.log(clc.red(err.message)));
