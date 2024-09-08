@@ -187,3 +187,5 @@ await browser2.close();
 for (const i in Config.sites) {
     await autovote(i);
 }
+
+await browser.close().catch(err => console.log(clc.red(err.message)));
