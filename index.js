@@ -181,9 +181,11 @@ async function autovote(i) {
 }, 60*60*12*1000);
 */
 
-for (const i in Config.sites) {
+/*for (const i in Config.sites) {
     await autovote(i);
-}
+}*/
+
+autovote(2)
 
 await browser.close().catch(err => console.log(clc.red(err.message)));
 await browser2.close().catch(err => console.log(clc.red(err.message)));
