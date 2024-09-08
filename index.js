@@ -1,6 +1,6 @@
 import puppeteer from 'puppeteer-extra';
 import StealthPlugin from 'puppeteer-extra-plugin-stealth';
-import { connect } from 'puppeteer-real-browser-nopecha';
+import { connect } from 'puppeteer-real-browser';
 import path from 'path';
 import clc from 'cli-color';
 import Config from './config.json' assert {type: "json"};
@@ -22,7 +22,7 @@ const response = await connect({
     turnstile: true
 }).catch(err => console.log(err));
 
-const {page, browser, setTarget} = response,
+const {page, browser,} = response,
 browser2 = await puppeteer.launch({
   timeout: 0,
   headless: true,
@@ -34,8 +34,6 @@ browser2 = await puppeteer.launch({
   targetFilter: null
 }).catch(err => console.log(err));
 
-setTarget({"true"})
-
 async function autovote(i) {
     await (Config.sites[i].turnstile ? browser : browser2).newPage().then(async page => {
 
@@ -43,9 +41,9 @@ async function autovote(i) {
 
         await page.goto(Config.sites[i].url, {waitUntil: "networkidle0", timeout: 0});
 
-        if([1, 6].includes(Config.sites[i].index)) {
+        /*if([1, 6].includes(Config.sites[i].index)) {
             await page.waitForFunction('document.title.includes("Vote")', {timeout: 0});
-    }
+    }*/
 
         console.log(clc.green("Website " + Config.sites[i].index + " | Website opened !"));
 
