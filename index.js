@@ -22,7 +22,7 @@ const response = await connect({
     turnstile: true
 }).catch(err => console.log(err));
 
-const {page, browser,} = response,
+const {page, browser, setTarget} = response,
 browser2 = await puppeteer.launch({
   timeout: 0,
   headless: true,
@@ -41,9 +41,9 @@ async function autovote(i) {
 
         await page.goto(Config.sites[i].url, {waitUntil: "networkidle0", timeout: 0});
 
-        /*if([1, 6].includes(Config.sites[i].index)) {
+        if([1, 6].includes(Config.sites[i].index)) {
             await page.waitForFunction('document.title.includes("Vote")', {timeout: 0});
-    }*/
+    }
 
         console.log(clc.green("Website " + Config.sites[i].index + " | Website opened !"));
 
@@ -189,4 +189,4 @@ for (const i in Config.sites) {
 }
 
 await browser.close().catch(err => console.log(clc.red(err.message)));
-await browser2.close().catch(err => console.log(clc.red(err.message)));
+
